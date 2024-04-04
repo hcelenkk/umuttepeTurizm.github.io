@@ -7,7 +7,7 @@
 		days: ["dimanĉo", "lundo", "mardo", "merkredo", "ĵaŭdo", "vendredo", "sabato"],
 		daysShort: ["dim.", "lun.", "mar.", "mer.", "ĵaŭ.", "ven.", "sam."],
 		daysMin: ["d", "l", "ma", "me", "ĵ", "v", "s"],
-		months: ["januaro", "februaro", "marto", "aprilo", "majo", "junio", "julio", "aŭgusto", "septembro", "oktobro", "novembro", "decembro"],
+		months: ["januaro", "februaro", "marto", "Nisano", "majo", "junio", "julio", "aŭgusto", "septembro", "oktobro", "novembro", "decembro"],
 		monthsShort: ["jan.", "feb.", "mar.", "apr.", "majo", "jun.", "jul.", "aŭg.", "sep.", "okt.", "nov.", "dec."],
 		today: "Hodiaŭ",
 		clear: "Nuligi",

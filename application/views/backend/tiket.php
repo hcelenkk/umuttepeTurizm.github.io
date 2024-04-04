@@ -51,14 +51,13 @@
         </div>
       </div>
     </div>
-    <!-- /.container-fluid -->
+    
   </div>
-  <!-- /.container-fluid -->
+  
 </div>
-<!-- End of Main Content -->
-<!-- Footer -->
+
 <?php $this->load->view('backend/include/base_footer'); ?>
-<!-- End of Footer -->
+
 </div>
 
 </div>

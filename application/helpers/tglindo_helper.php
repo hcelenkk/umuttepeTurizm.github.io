@@ -8,99 +8,99 @@ if ( ! function_exists('tgl_indo')){
     return $tanggal.' '.$bulan.' '.$tahun;
   }
   function tanggal_indo($tanggal){
-  $bulan = array (1 =>   'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
+  $bulan = array (1 =>   'Ocak',
+        'Subat',
+        'Mart',
+        'Nisan',
+        'Mayis',
+        'Haziran',
+        'Temmuz',
+        'Agustos',
+        'Eylul',
+        'Ekim',
+        'Kasim',
+        'Aralik'
       );
     $split = explode('-', $tanggal);
     return $split[2] . ' ' . $bulan[ (int)$split[1] ] . ' ' . $split[0];
   }
   function hari_indo($day){
-    $hari = array ( 1 =>    'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-      'Sunday'
+    $hari = array ( 1 =>    'Pazartesi',
+      'Sali',
+      'Carsamba',
+      'Persembe',
+      'Cuma',
+      'Cumartesi',
+      'Pazar'
     );
     return $hari[$day];
   }
   function tanggal_ing($tanggal1){
   $bulan1 = array (1 =>   
-        'January',
-        'February',
-          'March',
-       'April',
-         'May',
-         'June',
-          'July',
-            'August',
-           'September',
-           'October',
-         'November',
-            'December'
+        'Ocak',
+        'Subat',
+          'Mart',
+       'Nisan',
+         'Mayis',
+         'Haziran',
+          'Temmuz',
+            'Agustos',
+           'Eylul',
+           'Ekim',
+         'Kasim',
+            'Aralik'
       );
     $split1 = explode('-', $tanggal1);
     return $split1[2] . ' ' . $bulan1[ (int)$split1[1] ] . ' ' . $split1[0];
   }
   function hari_ing($day1){
-    $hari1 = array ( 1 =>    'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-      'Sunday'
+    $hari1 = array ( 1 =>    'Pazartesi',
+      'Sali',
+      'Carsamba',
+      'Persembe',
+      'Cuma',
+      'Cumartesi',
+      'Pazar'
     );
     return $hari1[$day1];
   }
   function getBulan($bln){
     switch ($bln){
       case 1:
-	    return "January";
+	    return "Ocak";
 	    break;
 	  case 2:
-	    return "February";
+	    return "Subat";
 	    break;
 	  case 3:
-	    return "March";
+	    return "Mart";
 	    break;
 	  case 4:
-	    return "April";
+	    return "Nisan";
 	    break;
 	  case 5:
-	    return "May";
+	    return "Mayis";
 	    break;
 	  case 6:
-	    return "June";
+	    return "Haziran";
 	    break;
 	  case 7:
-	    return "July";
+	    return "Temmuz";
 	    break;
 	  case 8:
-	    return "August";
+	    return "Agustos";
 	    break;
 	  case 9:
-	    return "September";
+	    return "Eylul";
 	    break;
 	  case 10:
-	    return "October";
+	    return "Ekim";
 	    break;
 	  case 11:
-	    return "November";
+	    return "Kasim";
 	    break;
 	  case 12:
-	    return "December";
+	    return "Aralik";
 	    break;
     }
   }
@@ -114,14 +114,14 @@ if ( ! function_exists('tgl_indo')){
   }
   
   function nama_hari(){
-    $seminggu = array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+    $seminggu = array("Pazar","Pazartesi","Sali","Carsamba","Persembe","Cuma","Cumartesi");
     $hari = date("w");
     $hari_ini = $seminggu[$hari];
     return $hari_ini;
   }
   function time_since($original)
 {
-  date_default_timezone_set('Asia/Jakarta');
+  date_default_timezone_set('Europe/Istanbul');
   $chunks = array(
       array(60 * 60 * 24 * 365, 'year'),
       array(60 * 60 * 24 * 30, 'month'),

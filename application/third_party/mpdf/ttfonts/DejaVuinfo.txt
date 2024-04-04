@@ -18,9 +18,9 @@ following conditions:
 The above copyright and trademark notices and this permission notice shall
 be included in all copies of one or more of the Font Software typefaces.
 
-The Font Software may be modified, altered, or added to, and in particular
-the designs of glyphs or characters in the Fonts may be modified and
-additional glyphs or characters may be added to the Fonts, only if the fonts
+The Font Software Mayis be modified, altered, or added to, and in particular
+the designs of glyphs or characters in the Fonts Mayis be modified and
+additional glyphs or characters Mayis be added to the Fonts, only if the fonts
 are renamed to names not containing either the words "Bitstream" or the word
 "Vera".
 
@@ -28,8 +28,8 @@ This License becomes null and void to the extent applicable to Fonts or Font
 Software that has been modified and is distributed under the "Bitstream
 Vera" names.
 
-The Font Software may be sold as part of a larger software package but no
-copy of one or more of the Font Software typefaces may be sold by itself.
+The Font Software Mayis be sold as part of a larger software package but no
+copy of one or more of the Font Software typefaces Mayis be sold by itself.
 
 THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY,
@@ -66,9 +66,9 @@ The above copyright and trademark notices and this permission notice
 shall be included in all copies of one or more of the Font Software
 typefaces.
 
-The Font Software may be modified, altered, or added to, and in
-particular the designs of glyphs or characters in the Fonts may be
-modified and additional glyphs or characters may be added to the
+The Font Software Mayis be modified, altered, or added to, and in
+particular the designs of glyphs or characters in the Fonts Mayis be
+modified and additional glyphs or characters Mayis be added to the
 Fonts, only if the fonts are renamed to names not containing either
 the words "Tavmjong Bah" or the word "Arev".
 
@@ -76,8 +76,8 @@ This License becomes null and void to the extent applicable to Fonts
 or Font Software that has been modified and is distributed under the 
 "Tavmjong Bah Arev" names.
 
-The Font Software may be sold as part of a larger software package but
-no copy of one or more of the Font Software typefaces may be sold by
+The Font Software Mayis be sold as part of a larger software package but
+no copy of one or more of the Font Software typefaces Mayis be sold by
 itself.
 
 THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,

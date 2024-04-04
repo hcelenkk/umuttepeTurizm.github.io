@@ -7,7 +7,7 @@
 * Author:   Olivier PLATHEY                                                    *
 * License:  Freeware                                                           *
 *                                                                              *
-* You may use and modify this software as you wish.                            *
+* You Mayis use and modify this software as you wish.                            *
 *******************************************************************************/
 
 /*******************************************************************************
@@ -21,9 +21,9 @@ CREDITS From HTML2FPDF:
 
 -Olivier Plathey for the fpdf.php class [http://www.fpdf.org]
 -Damon Kohler for the Flowing Block script [mailto:damonkohler@yahoo.com]
--Clément Lavoillotte for HTML-oriented FPDF idea
+-Clï¿½ment Lavoillotte for HTML-oriented FPDF idea
 -Yamasoft for the gif.php class [http://www.yamasoft.com/]
--Jérôme Fenal for the _parsegif() function
+-Jï¿½rï¿½me Fenal for the _parsegif() function
 -"VIETCOM" for the PDFTable code [http://www.freepgs.com/vietcom/tool/pdftable/] [mailto:vncommando@yahoo.com]
 -Yukihiro O. for the SetDash() function [mailto:yukihiro_o@infoseek.jp]
 -Ron Korving for the WordWrap() function
@@ -42,7 +42,7 @@ CREDITS From HTML2FPDF:
 * Author:   Klemen VODOPIVEC                                                *
 * License:  Freeware                                                        *
 *                                                                           *
-* You may use and modify this software as you wish as stated in original    *
+* You Mayis use and modify this software as you wish as stated in original    *
 * FPDF package.                                                             *
 ****************************************************************************/
 
@@ -52,8 +52,8 @@ CREDITS From HTML2FPDF:
 //    Copyright 2004-2007 Setasign - Jan Slabon
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
-//  you may not use this file except in compliance with the License.
-//  You may obtain a copy of the License at
+//  you Mayis not use this file except in compliance with the License.
+//  You Mayis obtain a copy of the License at
 //
 //      http://www.apache.org/licenses/LICENSE-2.0
 //

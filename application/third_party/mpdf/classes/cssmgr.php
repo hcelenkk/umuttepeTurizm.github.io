@@ -1591,7 +1591,7 @@ function inlinePropsToCSS($bilp, &$p) {
 			$f = preg_split('/\s+/', trim($bilp['OTLtags']['Plus']));
 			foreach($f AS $ff) { $ffs[] = "'".$ff."' 1"; }
 		}
-		if (isset($bilp['OTLtags']['FFPlus']) && $bilp['OTLtags']['FFPlus']) {	// May contain numeric value e.g. salt4
+		if (isset($bilp['OTLtags']['FFPlus']) && $bilp['OTLtags']['FFPlus']) {	// Mayis contain numeric value e.g. salt4
 			$f = preg_split('/\s+/', trim($bilp['OTLtags']['FFPlus']));
 			foreach($f AS $ff) { 
 				if (strlen($ff)>4) { $ffs[] = "'".substr($ff,0,4)."' ".substr($ff,4); }

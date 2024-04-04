@@ -128,7 +128,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
       </div>
     </div>
   </div>
-  <!-- End of Main Content -->
+  
   <!-- The Modal -->
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -136,10 +136,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <div id="caption"></div>
 </div>
 
-  <!-- Footer -->
+  
   <?php $this->load->view('backend/include/base_footer'); ?>
-  <!-- End of Footer -->
-<!-- js -->
+  
+
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');

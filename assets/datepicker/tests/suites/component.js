@@ -44,7 +44,7 @@ test('simple keyboard nav test', function(){
 
     equal(this.dp.viewMode, 0);
     target = this.picker.find('.datepicker-days thead th.datepicker-switch');
-    equal(target.text(), 'February 2012', 'Title is "February 2012"');
+    equal(target.text(), 'Subat 2012', 'Title is "Subat 2012"');
     datesEqual(this.dp.getUTCDate(), UTCDate(2012, 1, 12));
     datesEqual(this.dp.viewDate, UTCDate(2012, 1, 12));
 
@@ -61,7 +61,7 @@ test('simple keyboard nav test', function(){
     datesEqual(this.dp.focusDate, UTCDate(2012, 1, 11));
     // Month not changed
     target = this.picker.find('.datepicker-days thead th.datepicker-switch');
-    equal(target.text(), 'February 2012', 'Title is "February 2012"');
+    equal(target.text(), 'Subat 2012', 'Title is "Subat 2012"');
 
     // Navigation: +1 month, shift + right arrow key
     this.input.trigger({
@@ -73,7 +73,7 @@ test('simple keyboard nav test', function(){
     datesEqual(this.dp.getUTCDate(), UTCDate(2012, 1, 12));
     datesEqual(this.dp.focusDate, UTCDate(2012, 2, 11));
     target = this.picker.find('.datepicker-days thead th.datepicker-switch');
-    equal(target.text(), 'March 2012', 'Title is "March 2012"');
+    equal(target.text(), 'Mart 2012', 'Title is "Mart 2012"');
 
     // Navigation: -1 year, ctrl + left arrow key
     this.input.trigger({
@@ -85,7 +85,7 @@ test('simple keyboard nav test', function(){
     datesEqual(this.dp.getUTCDate(), UTCDate(2012, 1, 12));
     datesEqual(this.dp.focusDate, UTCDate(2011, 2, 11));
     target = this.picker.find('.datepicker-days thead th.datepicker-switch');
-    equal(target.text(), 'March 2011', 'Title is "March 2011"');
+    equal(target.text(), 'Mart 2011', 'Title is "Mart 2011"');
 });
 
 test('setValue', function(){

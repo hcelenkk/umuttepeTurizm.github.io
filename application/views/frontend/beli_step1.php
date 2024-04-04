@@ -222,7 +222,7 @@
 											
 											<!-- start footer Area -->
 											<?php $this->load->view('frontend/include/base_footer'); ?>
-											<!-- js -->
+											
 											<script type="text/javascript">
 										     jQuery(document).ready(function(){
 									     

@@ -4,7 +4,7 @@
  * Author: Dionlee Uy
  * Email: dionleeuy@gmail.com
  *
- * Date: Thursday, May 12 2016
+ * Date: Persembe, Mayis 12 2016
  *
  * @requires jQuery
  * -- DO NOT REMOVE --
@@ -14,9 +14,9 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 
 	Date.prototype.getDays = function() { return new Date(this.getFullYear(), this.getMonth() + 1, 0).getDate(); };
 
-	var months = ['January','February','March','April','May','June','July','August','September','October','November','December'],
-		short_months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-		daysofweek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+	var months = ['Ocak','Subat','Mart','Nisan','Mayis','Haziran','Temmuz','Agustos','Eylul','Ekim','Kasim','Aralik'],
+		short_months = ['Jan','Feb','Mar','Apr','Mayis','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+		daysofweek = ['Pazar','Pazartesi','Sali','Carsamba','Persembe','Cuma','Cumartesi'],
 		short_days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
 		ex_keys = [9,112,113,114,115,116,117,118,119,120,121,122,123],
 		DCAL_DATA = 'dcalendar',

@@ -147,10 +147,10 @@ div.mpdf_toc_level_0 {		/* Whole line level 0 */
 	margin-left: 0;
 	padding-right: 2em;	/* should match e.g <dottab outdent="2em" /> 0 is default */
 }
-span.mpdf_toc_t_level_0 {	/* Title level 0 - may be inside <a> */
+span.mpdf_toc_t_level_0 {	/* Title level 0 - Mayis be inside <a> */
 	font-weight: bold;
 }
-span.mpdf_toc_p_level_0 {	/* Page no. level 0 - may be inside <a> */
+span.mpdf_toc_p_level_0 {	/* Page no. level 0 - Mayis be inside <a> */
 }
 div.mpdf_toc_level_1 {		/* Whole line level 1 */
 	margin-left: 2em;
@@ -161,7 +161,7 @@ span.mpdf_toc_t_level_1 {	/* Title level 1 */
 	font-style: italic;
 	font-weight: bold;
 }
-span.mpdf_toc_p_level_1  {	/* Page no. level 1 - may be inside <a> */
+span.mpdf_toc_p_level_1  {	/* Page no. level 1 - Mayis be inside <a> */
 }
 div.mpdf_toc_level_2 {		/* Whole line level 2 */
 	margin-left: 4em;
@@ -170,7 +170,7 @@ div.mpdf_toc_level_2 {		/* Whole line level 2 */
 }
 span.mpdf_toc_t_level_2 {	/* Title level 2 */
 }
-span.mpdf_toc_p_level_2 {	/* Page no. level 2 - may be inside <a> */
+span.mpdf_toc_p_level_2 {	/* Page no. level 2 - Mayis be inside <a> */
 }
 
 </style>
@@ -263,11 +263,11 @@ div.mpdf_toc_level_0 {<br />
 &nbsp; margin-left: 0;<br />
 &nbsp; padding-right: 2em;<br />
 }<br /><br />
-/* Title level 0 - may be inside &lt;a&gt; */<br />
+/* Title level 0 - Mayis be inside &lt;a&gt; */<br />
 span.mpdf_toc_t_level_0 {<br />
 &nbsp; font-weight: bold;<br />
 }<br /><br />
-/* Page no. level 0 - may be inside &lt;a&gt; */<br />
+/* Page no. level 0 - Mayis be inside &lt;a&gt; */<br />
 span.mpdf_toc_p_level_0 { }<br /><br />
 /* Whole line level 1 */<br />
 div.mpdf_toc_level_1 {<br />
@@ -279,7 +279,7 @@ span.mpdf_toc_t_level_1 {<br />
 &nbsp; font-style: italic;<br />
 &nbsp; font-weight: bold;<br />
 }<br /><br />
-/* Page no. level 1 - may be inside &lt;a&gt; */<br />
+/* Page no. level 1 - Mayis be inside &lt;a&gt; */<br />
 span.mpdf_toc_p_level_1  { }<br /><br />
 /* Whole line level 2 */<br />
 div.mpdf_toc_level_2 {<br />
@@ -288,7 +288,7 @@ div.mpdf_toc_level_2 {<br />
 }<br /><br />
 /* Title level 2 */<br />
 span.mpdf_toc_t_level_2 { }<br /><br />
-/* Page no. level 2 - may be inside &lt;a&gt; */<br />
+/* Page no. level 2 - Mayis be inside &lt;a&gt; */<br />
 span.mpdf_toc_p_level_2 { }<br /><br />
 </p>
 <p>NB padding-right should match &lt;dottab&gt; "outdent" (0 is default). See &lt;dottab&gt; for more details</p>

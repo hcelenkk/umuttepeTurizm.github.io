@@ -654,8 +654,8 @@ for($sch=0;$sch<=$subchunk;$sch++) {
 	else if ($this->shaper == 'E') {
       /* HarfBuzz says: If the designer designed the font for the 'DFLT' script,
        * use the default shaper.  Otherwise, use the SEA shaper.
-       * Note that for some simple scripts, there may not be *any*
-       * GSUB/GPOS needed, so there may be no scripts found! */
+       * Note that for some simple scripts, there Mayis not be *any*
+       * GSUB/GPOS needed, so there Mayis be no scripts found! */
 
 		$this->restrictToSyllable = true;
 		//-----------------------------------------------------------------------------------
@@ -832,8 +832,8 @@ for($sch=0;$sch<=$subchunk;$sch++) {
 			// so we will do one minor change here:
            		// From ICU: If the present character is a number, and the next character is a pre-number combining mark
            		 // then the two characters are reordered
-			// From MS OTL spec the following are Digit modifiers (Md): 0F18–0F19, 0F3E–0F3F
-			// Digits: 0F20–0F33
+			// From MS OTL spec the following are Digit modifiers (Md): 0F18ï¿½0F19, 0F3Eï¿½0F3F
+			// Digits: 0F20ï¿½0F33
 			// On testing only 0x0F3F (pre-based mark) seems to need re-ordering
 			for($ptr=0; $ptr<count($this->OTLdata)-1; $ptr++) {
     				if (INDIC::in_range($this->OTLdata[$ptr]['uni'], 0x0F20, 0x0F33) && $this->OTLdata[$ptr+1]['uni'] == 0x0F3F ) {
@@ -1148,13 +1148,13 @@ function _applyTagSettings($tags, $Features, $omittags='', $onlytags=false) {
 		}
 
 		// Font features to enable - set by font-feature-settings
-		if (isset($this->mpdf->OTLtags['FFPlus'])) $ffp = $this->mpdf->OTLtags['FFPlus'];	// Font Features - may include integer: salt4
+		if (isset($this->mpdf->OTLtags['FFPlus'])) $ffp = $this->mpdf->OTLtags['FFPlus'];	// Font Features - Mayis include integer: salt4
 		preg_match_all('/([a-zA-Z0-9]{4})([\d+]*)/',$ffp,$m);
 		for($i=0;$i<count($m[0]);$i++) {
 			$t = $m[1][$i];
 			// Is it a valid tag?
 			if(isset($Features[$t]) && strpos($omittags,$t)===false && (!$onlytags || strpos($tags,$t)!==false )) {
-				$usetags .= ' '.$m[0][$i];		//  - may include integer: salt4
+				$usetags .= ' '.$m[0][$i];		//  - Mayis include integer: salt4
 			}
 		}
 
@@ -1551,7 +1551,7 @@ function _applyGSUBsubtable($lookupID, $subtable, $ptr, $currGlyph, $currGID, $s
 		$AlternateSetCount = $this->read_short();
 		///////////////////////////////////////////////////////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		// Need to set alternate IF set by CSS3 font-feature for a tag
-		// i.e. if this is 'salt' alternate may be set to 2
+		// i.e. if this is 'salt' alternate Mayis be set to 2
 		// default value will be $alt=1 ( === index of 0 in list of alternates)
 		$alt = 1;	// $alt=1 points to Alternative[0]
 		if ($tagInt>1) { $alt = $tagInt; }
@@ -1736,7 +1736,7 @@ function _applyGSUBsubtable($lookupID, $subtable, $ptr, $currGlyph, $currGID, $s
 
 			$InputClasses = $this->_getClasses($InputClassDefOffset);
 
-			for ($s=0;$s<$SubClassSetCnt;$s++) {	// $SubClassSet is ordered by input class-may be NULL
+			for ($s=0;$s<$SubClassSetCnt;$s++) {	// $SubClassSet is ordered by input class-Mayis be NULL
 				// Select $SubClassSet if currGlyph is in First Input Class
 				if ($SubClassSetOffset[$s]>0 && isset($InputClasses[$s][$currGID])) {
 					$this->seek($SubClassSetOffset[$s]);
@@ -1939,7 +1939,7 @@ function _applyGSUBsubtable($lookupID, $subtable, $ptr, $currGlyph, $currGID, $s
 			$InputClasses = $this->_getClasses($InputClassDefOffset);
 			$LookaheadClasses = $this->_getClasses($LookaheadClassDefOffset);
 
-			for ($s=0;$s<$ChainSubClassSetCnt;$s++) {	// $ChainSubClassSet is ordered by input class-may be NULL
+			for ($s=0;$s<$ChainSubClassSetCnt;$s++) {	// $ChainSubClassSet is ordered by input class-Mayis be NULL
 				// Select $ChainSubClassSet if currGlyph is in First Input Class
 				if ($ChainSubClassSetOffset[$s]>0 && isset($InputClasses[$s][$currGID])) {
 					$this->seek($ChainSubClassSetOffset[$s]);
@@ -2338,7 +2338,7 @@ function GSUBsubstitute($pos, $substitute, $Type, $GlyphPos=NULL ) {
    * - If a ligature is formed of components that some of which are also ligatures
    *   themselves, and those ligature components had marks attached to *their*
    *   components, we have to attach the marks to the new ligature component
-   *   positions!  Now *that*'s tricky!  And these marks may be following the
+   *   positions!  Now *that*'s tricky!  And these marks Mayis be following the
    *   last component of the whole sequence, so we should loop forward looking
    *   for them and update them.
    *
@@ -3529,7 +3529,7 @@ function _applyGPOSsubtable($lookupID, $subtable, $ptr, $currGlyph, $currGID, $s
 
 			$InputClasses = $this->_getClasses($InputClassDefOffset);
 
-			for ($s=0;$s<$PosClassSetCnt;$s++) {	// $ChainPosClassSet is ordered by input class-may be NULL
+			for ($s=0;$s<$PosClassSetCnt;$s++) {	// $ChainPosClassSet is ordered by input class-Mayis be NULL
 				// Select $PosClassSet if currGlyph is in First Input Class
 				if ($PosClassSetOffset[$s]>0 && isset($InputClasses[$s][$currGID])) {
 					$this->seek($PosClassSetOffset[$s]);
@@ -3654,7 +3654,7 @@ function _applyGPOSsubtable($lookupID, $subtable, $ptr, $currGlyph, $currGID, $s
 			$InputClasses = $this->_getClasses($InputClassDefOffset);
 			$LookaheadClasses = $this->_getClasses($LookaheadClassDefOffset);
 
-			for ($s=0;$s<$ChainPosClassSetCnt;$s++) {	// $ChainPosClassSet is ordered by input class-may be NULL
+			for ($s=0;$s<$ChainPosClassSetCnt;$s++) {	// $ChainPosClassSet is ordered by input class-Mayis be NULL
 				// Select $ChainPosClassSet if currGlyph is in First Input Class
 				if ($ChainPosClassSetOffset[$s]>0 && isset($InputClasses[$s][$currGID])) {
 					$this->seek($ChainPosClassSetOffset[$s]);
@@ -4101,13 +4101,13 @@ function _applyGPOSsubtable($lookupID, $subtable, $ptr, $currGlyph, $currGID, $s
 		if (($ValueFormat & 0x0004) == 0x0004) { $vra['XAdvance'] = $this->read_short(); }
 		// Vertical adjustment for advance - in design units (only used for vertical writing)
 		if (($ValueFormat & 0x0008) == 0x0008) { $this->read_short(); }
-		// Offset to Device table for horizontal placement-measured from beginning of PosTable (may be NULL)
+		// Offset to Device table for horizontal placement-measured from beginning of PosTable (Mayis be NULL)
 		if (($ValueFormat & 0x0010) == 0x0010) { $this->read_ushort(); }
-		// Offset to Device table for vertical placement-measured from beginning of PosTable (may be NULL)
+		// Offset to Device table for vertical placement-measured from beginning of PosTable (Mayis be NULL)
 		if (($ValueFormat & 0x0020) == 0x0020) { $this->read_ushort(); }
-		// Offset to Device table for horizontal advance-measured from beginning of PosTable (may be NULL)
+		// Offset to Device table for horizontal advance-measured from beginning of PosTable (Mayis be NULL)
 		if (($ValueFormat & 0x0040) == 0x0040) { $this->read_ushort(); }
-		// Offset to Device table for vertical advance-measured from beginning of PosTable (may be NULL)
+		// Offset to Device table for vertical advance-measured from beginning of PosTable (Mayis be NULL)
 		if (($ValueFormat & 0x0080) == 0x0080) { $this->read_ushort(); }
 		return $vra;
 	}
@@ -4789,7 +4789,7 @@ function _bidiPrepare(&$para, $dir) {
 					$match = array_pop($remember);
 				}
 			}
-			//	In all cases, set the PDI’s level to the embedding level of the last entry on the directional status stack left after the steps above.
+			//	In all cases, set the PDIï¿½s level to the embedding level of the last entry on the directional status stack left after the steps above.
 			//	NB The level assigned to an isolate initiator is always the same as that assigned to the matching PDI.
 			if ($dos != -1) { $chardir = $dos; } 
 			else { $chardir = $chunkOTLdata['char_data'][$i]['bidi_class']; }

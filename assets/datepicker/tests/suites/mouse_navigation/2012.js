@@ -1,12 +1,12 @@
 module('Mouse Navigation 2012', {
     setup: function(){
         /*
-            Tests start with picker on March 31, 2012.  Fun facts:
+            Tests start with picker on Mart 31, 2012.  Fun facts:
 
-            * February 1, 2012 was on a Wednesday
-            * February 29, 2012 was on a Wednesday
-            * March 1, 2012 was on a Thursday
-            * March 31, 2012 was on a Saturday
+            * Subat 1, 2012 was on a Carsamba
+            * Subat 29, 2012 was on a Carsamba
+            * Mart 1, 2012 was on a Persembe
+            * Mart 31, 2012 was on a Cumartesi
         */
         this.input = $('<input type="text" value="31-03-2012">')
                         .appendTo('#qunit-fixture')
@@ -214,11 +214,11 @@ test('Selecting date from previous month resets viewDate and date, changing mont
     equal(this.dp.viewMode, 0);
     target = this.picker.find('.datepicker-days tbody td:first');
     equal(target.text(), '26'); // Should be Feb 26
-    equal(this.picker.find('.datepicker-days thead th.datepicker-switch').text(), 'March 2012');
+    equal(this.picker.find('.datepicker-days thead th.datepicker-switch').text(), 'Mart 2012');
 
     // Updated internally on click
     target.click();
-    equal(this.picker.find('.datepicker-days thead th.datepicker-switch').text(), 'February 2012');
+    equal(this.picker.find('.datepicker-days thead th.datepicker-switch').text(), 'Subat 2012');
     datesEqual(this.dp.viewDate, UTCDate(2012, 1, 26));
     datesEqual(this.dp.dates.get(-1), UTCDate(2012, 1, 26));
 
@@ -236,12 +236,12 @@ test('Selecting date from next month resets viewDate and date, changing month di
     // Rendered correctly
     equal(this.dp.viewMode, 0);
     target = this.picker.find('.datepicker-days tbody td:last');
-    equal(target.text(), '5'); // Should be May 5
-    equal(this.picker.find('.datepicker-days thead th.datepicker-switch').text(), 'April 2012');
+    equal(target.text(), '5'); // Should be Mayis 5
+    equal(this.picker.find('.datepicker-days thead th.datepicker-switch').text(), 'Nisan 2012');
 
     // Updated internally on click
     target.click();
-    equal(this.picker.find('.datepicker-days thead th.datepicker-switch').text(), 'May 2012');
+    equal(this.picker.find('.datepicker-days thead th.datepicker-switch').text(), 'Mayis 2012');
     datesEqual(this.dp.viewDate, UTCDate(2012, 4, 5));
     datesEqual(this.dp.dates.get(-1), UTCDate(2012, 4, 5));
 

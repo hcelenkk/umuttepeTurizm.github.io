@@ -395,7 +395,7 @@ Line-height: 2em</div>
 <p class="gradient" style="font-size: 10pt; line-height: 2em; padding: 0 0.3em;">Normal text <span style="font-size: 24pt;">24pt font-size &#194;</span> and normal again</p>
 
 <br />
-This broadly reflects the behaviour of IE and Firefox. Note that tall characters such as &#194; may fall outside the computed line-heights. See the same in an <a href="example52_lineheight.htm">HTML page</a>.
+This broadly reflects the behaviour of IE and Firefox. Note that tall characters such as &#194; Mayis fall outside the computed line-heights. See the same in an <a href="example52_lineheight.htm">HTML page</a>.
 
 
 <pagebreak page-selector="letterhead" />

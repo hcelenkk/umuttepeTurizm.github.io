@@ -76,7 +76,7 @@ The online manual lists a number of open-source fonts available to cover uncommo
 <pagebreak />
 <h2>Complex scripts</h2>
 
-<p>Although all characters may be displayed, there are various reasons why a script may not appear as expected.</p>
+<p>Although all characters Mayis be displayed, there are various reasons why a script Mayis not appear as expected.</p>
 
 <h4>Right-to-left languages (Hebrew, Arabic etc.)</h4>
 Arabic languages and Hebrew are written in a right-to-left direction (RTL). mPDF recognises both Arabic and Hebrew languages and reverses text direction automatically.
@@ -287,7 +287,7 @@ $this->fontdata = array(<br />
 &lt;/div&gt;
 </div>
 
-<p>NB You may also need to edit the value $this->useAdobeCJK=false in config.php or use new mPDF(\'-aCJK\'), and edit the config_cp.php configuration file.</p>
+<p>NB You Mayis also need to edit the value $this->useAdobeCJK=false in config.php or use new mPDF(\'-aCJK\'), and edit the config_cp.php configuration file.</p>
 
 
 <pagebreak />

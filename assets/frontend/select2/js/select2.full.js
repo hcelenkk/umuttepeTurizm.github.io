@@ -113,10 +113,10 @@ var requirejs, require, define;
                     i -= 1;
                 } else if (part === '..') {
                     // If at the start, or previous value is still ..,
-                    // keep them so that when converted to a path it may
+                    // keep them so that when converted to a path it Mayis
                     // still work when converted to a path, even though
                     // as an ID it is less than ideal. In larger point
-                    // releases, may be better to just kick out an error.
+                    // releases, Mayis be better to just kick out an error.
                     if (i === 0 || (i === 1 && name[2] === '..') || name[i - 1] === '..') {
                         continue;
                     } else if (i > 0) {
@@ -187,7 +187,7 @@ var requirejs, require, define;
     function makeRequire(relName, forceSync) {
         return function () {
             //A version of a require function that passes a moduleName
-            //value for items that may need to
+            //value for items that Mayis need to
             //look up paths relative to the moduleName
             var args = aps.call(arguments, 0);
 
@@ -375,7 +375,7 @@ var requirejs, require, define;
                 }
             }
         } else if (name) {
-            //May just be an object definition for the module. Only
+            //Mayis just be an object definition for the module. Only
             //worry about defining if have a module name.
             defined[name] = callback;
         }
@@ -459,7 +459,7 @@ var requirejs, require, define;
             throw new Error('See almond README: incorrect module build, no module name');
         }
 
-        //This module may not have dependencies
+        //This module Mayis not have dependencies
         if (!deps.splice) {
             //deps is not an array, so probably means
             //an object literal or factory function for
@@ -5973,7 +5973,7 @@ S2.define('select2/compat/inputData',[
       if (options.get('debug') && console && console.warn) {
         console.warn(
           'Select2: Using a hidden input with Select2 is no longer ' +
-          'supported and may stop working in the future. It is recommended ' +
+          'supported and Mayis stop working in the future. It is recommended ' +
           'to use a `<select>` element instead.'
         );
       }

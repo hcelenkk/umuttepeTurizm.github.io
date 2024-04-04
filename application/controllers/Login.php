@@ -46,13 +46,13 @@ class Login extends CI_Controller {
 						}
 					}else{
 					$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-					Wrong Password
+					Şifre Yanlış
 					</div>');
 					redirect('login');
 				}
 			}else{
 				$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-				Account Not verified yet!!
+				Hesap henüz doğrulanmadı!!
 					</div>');
 				redirect('login');
 			}
@@ -124,8 +124,8 @@ class Login extends CI_Controller {
                'charset'   => 'utf-8',
                'protocol'  => 'smtp',
                'smtp_host' => 'ssl://smtp.gmail.com',
-               'smtp_user' => 'demo@email.com',    // Ganti dengan email gmail kamu
-               'smtp_pass' => 'P@$$\/\/0RD',      // Password gmail kamu
+               'smtp_user' => 'demo@email.com',  
+               'smtp_pass' => 'P@$$\/\/0RD',     
                'smtp_port' => 465,
                'crlf'      => "rn",
                'newline'   => "rn"
@@ -162,26 +162,26 @@ class Login extends CI_Controller {
 					$this->db->update('tbl_musteri', $update,$where);
 					$this->db->delete('tbl_musteriToken',['tokenEmail' => $email]);
 					$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
-					Successfully Verify Your Account, Login
+					Hesap başarıyla doğrulandı. Giriş Yapın
 					</div>');
 					redirect('login');
 				}else{
 					$this->db->delete('tbl_musteri',['musteriEmail' => $email]);
 					$this->db->delete('tbl_musteriToken',['tokenEmail' => $email]);
 					$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-					Token Expired, Please re-register your account
+					Token Süresi Doldu, Lütfen hesabınızı yeniden kaydedin
 						</div>');
 	    			redirect('login');
 				}
 			}else{
 				$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-				Incorrect Token Verification Failed
+				Jeton Doğrulaması Başarısız
 						</div>');
 	    		redirect('login');
 			}
 		}else{
 		$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-		Email Verification Failed
+		Email Doğrulaması Başarısız
 						</div>');
 	    redirect('login');
 		}
@@ -189,8 +189,8 @@ class Login extends CI_Controller {
 	
 	public function lupapassword($value=''){
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email',array(
-			'required' => 'Email Required.',
-			'valid_email' => 'Enter Email Correctly',
+			'required' => 'E-posta Gerekli.',
+			'valid_email' => 'E-posta adresi giriniz',
 			 ));
 		if ($this->form_validation->run() == false) {
 			$this->load->view('frontend/lupapassword');
@@ -206,7 +206,7 @@ class Login extends CI_Controller {
 				 );
 			$this->db->insert('tbl_musteriToken', $data);
 			$this->_sendmail($token,'forgot');
-			$this->session->set_flashdata('message', 'swal("Success", "Successfully Reset Password Please Check Your Email", "success");');
+			$this->session->set_flashdata('message', 'swal("Success", "Şifrenizi Sıfırlamak İçin Lütfen E-postanızı Kontrol Edin", "success");');
     		redirect('login');
 			}else{
 				$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
@@ -227,13 +227,13 @@ class Login extends CI_Controller {
 				$this->changepassword();
 			}else{
 				$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-				Failed to Reset Wrong Email Token
+				Yanlış E-posta Belirteci Sıfırlanamadı
 						</div>');
 	    		redirect('login');
 			}
 		}else{
 		$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-		Failed to Reset Wrong Email
+		Yanlış E-posta Sıfırlanamadı
 						</div>');
 	    redirect('login');
 		}
@@ -244,8 +244,8 @@ class Login extends CI_Controller {
 			redirect('login/daftar');
 		}
 		$this->form_validation->set_rules('password1', 'sifre', 'trim|required|min_length[8]|matches[password2]',array(
-			'matches' => 'Password Not Same.',
-			'min_length' => 'Password Minimum 8 Characters.'
+			'matches' => 'Şifreler Farklı.',
+			'min_length' => 'Minimum 8 karakter olmalı.'
 			 ));
 		$this->form_validation->set_rules('password2', 'sifre', 'trim|required|matches[password1]');
 		if ($this->form_validation->run() == false) {
@@ -261,13 +261,9 @@ class Login extends CI_Controller {
 			$this->session->unset_userdata('resetemail');
 			$this->db->delete('tbl_musteriToken',['tokenEmail' => $email]);
 			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
-					Successfully Reset, Login Your Account Back
+				Sıfırlama Başarılı, Hesabınıza Tekrar Giriş Yapın
 					</div>');
 			redirect('login');
 		}
 	}
 }
-
-/* End of file Login.php */
-
-/* Location: ./application/controllers/Login.php */

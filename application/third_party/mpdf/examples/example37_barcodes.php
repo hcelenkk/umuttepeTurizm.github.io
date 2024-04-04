@@ -54,7 +54,7 @@ mpdf-->
 <p>NB <b>Quiet zones</b> - The barcode object includes space to the right/left or top/bottom only when the specification states a \'quiet zone\' or \'light margin\'. All the examples below also have CSS property set on the barcode object i.e. padding: 1.5mm; </p>
 
 <h3>EAN-13 Barcodes (EAN-2 and EAN-5)</h3>
-<p>NB EAN-13, UPC-A, UPC-E, and EAN-8 may all include an additional bar code(EAN-2 and EAN-5) to the right of the main bar code (see below).</p>
+<p>NB EAN-13, UPC-A, UPC-E, and EAN-8 Mayis all include an additional bar code(EAN-2 and EAN-5) to the right of the main bar code (see below).</p>
 <p>A nominal height and width for these barcodes is defined by the specification. \'size\' will scale both the height and width. Values between 0.8 and 2 are allowed (i.e. 80% to 200% of the nominal size). \'height\' can also be varied as a factor of 1; this is applied after the scaling factor used for \'size\'.</p>
 <table class="items" width="100%" cellpadding="8" border="1">
 <thead>
@@ -85,7 +85,7 @@ mpdf-->
 </table>
 
 <h3>EAN-8, UPC-A and UPC-E Barcodes</h3>
-<p>UPC-A, UPC-E, EAN-13, and EAN-8 may all include an additional bar code(EAN-2 and EAN-5) to the right of the main bar code (see below).</p>
+<p>UPC-A, UPC-E, EAN-13, and EAN-8 Mayis all include an additional bar code(EAN-2 and EAN-5) to the right of the main bar code (see below).</p>
 <p>A nominal height and width for these barcodes is defined by the specification. \'size\' will scale both the height and width. Values between 0.8 and 2 are allowed (i.e. 80% to 200% of the nominal size). \'height\' can also be varied as a factor of 1; this is applied after the scaling factor used for \'size\'.</p>
 <table class="items" width="100%" cellpadding="8" border="1">
 <thead>
@@ -116,7 +116,7 @@ mpdf-->
 </table>
 
 <h3>EAN-2 and EAN-5 supplements, and combined forms</h3>
-<p>UPC-A, UPC-E, EAN-13, and EAN-8 may all include an additional bar code(EAN-2 and EAN-5) to the right of the main bar code.</p>
+<p>UPC-A, UPC-E, EAN-13, and EAN-8 Mayis all include an additional bar code(EAN-2 and EAN-5) to the right of the main bar code.</p>
 <table class="items" width="100%" cellpadding="8" border="1">
 <thead>
 <tr>
@@ -212,7 +212,7 @@ mpdf-->
 <!-- ITEMS HERE -->
 <tr>
 <td align="center">IMB</td>
-<td>Intelligent Mail Barcode - also known as: USPS OneCode 4-State Customer Barcode, OneCode 4CB, USPS 4CB, 4-CB, 4-State Customer Barcode, USPS OneCode Solution Barcode. (01234567094987654321-01234567891) Accepts: Up to 31 digits (required 20-digit Tracking Code, and up to 11-digit Routing Code; this may be 0, 5, 9, or 11 digits). If the Routing code is included, it should be spearated by a hyphen - like this example.</td>
+<td>Intelligent Mail Barcode - also known as: USPS OneCode 4-State Customer Barcode, OneCode 4CB, USPS 4CB, 4-CB, 4-State Customer Barcode, USPS OneCode Solution Barcode. (01234567094987654321-01234567891) Accepts: Up to 31 digits (required 20-digit Tracking Code, and up to 11-digit Routing Code; this Mayis be 0, 5, 9, or 11 digits). If the Routing code is included, it should be spearated by a hyphen - like this example.</td>
 <td class="barcodecell"><barcode code="01234567094987654321-01234567891" type="IMB" class="barcode" /></td>
 </tr>
 <tr>

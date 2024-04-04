@@ -226,7 +226,7 @@ public static function set_syllables(&$o, $s, &$broken_syllables) {
 		else if (preg_match('/^(RH|r)?[N]?([ZJ]?H[CR])?([M]*[N]?[H]?)?[S]?[v]{0,2}/', substr($s,$ptr), $ma)) {
 		// From HarfBuzz:
 		//else if (preg_match('/^(RH|r)?(Z?[N]{0,2})?(([ZJ]?H(J[N]?)?)[CR]J?(Z?[N]{0,2})?){0,4}((([ZJ]?H(J[N]?)?)|HZ)|(HJ)?([ZJ]{0,3}M[N]?(H|JHJR)?){0,4})(S[Z]?)?[v]{0,2}/', substr($s,$ptr), $ma)) {
-			if (strlen($ma[0])) {	// May match blank
+			if (strlen($ma[0])) {	// Mayis match blank
 				$syllable_length = strlen($ma[0]);
 				$syllable_type = self::BROKEN_CLUSTER ;
 				$broken_syllables = true;
@@ -293,7 +293,7 @@ public static function set_syllables_khmer(&$o, $s, &$broken_syllables) {
 
 		// BROKEN_CLUSTER syllable
 		else if (preg_match('/^(RH|r)?((Z?F)?[N]{0,2})?(([ZJ]?G(JN?)?)[CR]J?((Z?F)?[N]{0,2})?){0,4}((([ZJ]?G(JN?)?)|GZ)|(GJ)?([ZJ]{0,3}MN?(H|JHJR)?){0,4})(G([CR]J?((Z?F)?[N]{0,2})?|V))?(SZ?)?[v]{0,2}/', substr($s,$ptr), $ma)) {
-			if (strlen($ma[0])) {	// May match blank
+			if (strlen($ma[0])) {	// Mayis match blank
 				$syllable_length = strlen($ma[0]);
 				$syllable_type = self::BROKEN_CLUSTER ;
 				$broken_syllables = true;
@@ -768,7 +768,7 @@ if (!defined("OMIT_INDIC_FIX_2") || OMIT_INDIC_FIX_2 != 1) {
 		/* Old-spec eye-lash Ra needs special handling.	From the spec:
 		* "The feature 'below-base form' is applied to consonants
 		* having below-base forms and following the base consonant.
-		* The exception is vattu, which may appear below half forms
+		* The exception is vattu, which Mayis appear below half forms
 		* as well as below the base glyph. The feature 'below-base
 		* form' will be applied to all such occurrences of Ra as well."
 		*
@@ -1071,7 +1071,7 @@ public static function final_reordering_syllable (&$info, $GSUBdata, $indic_conf
 		for ($i = $base + 1; $i < $end; $i++) {
 			if ($info[$i]['mask'] & self::FLAG(self::PREF)) {
 				/*	1. Only reorder a glyph produced by substitution during application
-	 			*	of the <pref> feature. (Note that a font may shape a Ra consonant with
+	 			*	of the <pref> feature. (Note that a font Mayis shape a Ra consonant with
 	 			*	the feature generally but block it in certain contexts.)
 	 			*/
 // ??? Need to TEST if actual substitution has occurred

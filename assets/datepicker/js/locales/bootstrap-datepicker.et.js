@@ -8,7 +8,7 @@
 		days: ["Pühapäev", "Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev"],
 		daysShort: ["Pühap", "Esmasp", "Teisip", "Kolmap", "Neljap", "Reede", "Laup"],
 		daysMin: ["P", "E", "T", "K", "N", "R", "L"],
-		months: ["Jaanuar", "Veebruar", "Märts", "Aprill", "Mai", "Juuni", "Juuli", "August", "September", "Oktoober", "November", "Detsember"],
+		months: ["Jaanuar", "Veebruar", "Märts", "Nisanl", "Mai", "Juuni", "Juuli", "Agustos", "Eylul", "Oktoober", "Kasim", "Detsember"],
 		monthsShort: ["Jaan", "Veebr", "Märts", "Apr", "Mai", "Juuni", "Juuli", "Aug", "Sept", "Okt", "Nov", "Dets"],
 		today: "Täna",
 		clear: "Tühjenda",

@@ -15,13 +15,13 @@
     <?php $this->load->view('backend/include/base_nav'); ?>
     
     <div class="container-fluid">
-      <h1 class="h5 text-gray-800">Schedule Management</h1>
+      <h1 class="h5 text-gray-800">Program Yönetimi</h1>
       <!-- DataTales Example -->
       
       <div class="card shadow mb-4">
         <div class="card-header py-3">
           <a href="<?= base_url('backend/jadwal/tambahjadwal') ?>" class="btn btn-success pull-right" >
-          Add Schedule
+          Program Ekle
           </a>
         </div>
         <div class="card-body">
@@ -30,13 +30,13 @@
               <thead class="thead-dark">
                 <tr>
                   <th>#</th>
-                  <th>Code</th>
-                  <th>Origin</th>
-                  <th>Destination</th>
-                  <th>Departure</th>
-                  <th>Arrival</th>
-                  <th>Price</th>
-                  <th>Action</th>
+                  <th>Kod</th>
+                  <th>Başlangıç Noktası</th>
+                  <th>Varış Noktası</th>
+                  <th>Departman</th>
+                  <th>Varış</th>
+                  <th>Fiyat</th>
+                  <th>Aksiyon</th>
                 </tr>
               </thead>
               <tbody>
@@ -50,7 +50,7 @@
                   <td><?= date('H:i',strtotime($row['varisSaati'])); ?></td>
                   <!-- <td>$<?= number_format((float)($row['fiyatTarifesi']),0,",","."); ?>,-</td> -->
                   <td>$<?= number_format((float)($row['fiyatTarifesi']),0,",","."); ?></td>
-                  <td><a href="<?= base_url('backend/jadwal/viewjadwal/'.$row['saatKodu']) ?>" class="btn btn-info">View</a></td>
+                  <td><a href="<?= base_url('backend/jadwal/viewjadwal/'.$row['saatKodu']) ?>" class="btn btn-info">İncele</a></td>
                 </td>
               </tr>
               <?php } ?>
@@ -59,15 +59,13 @@
         </div>
       </div>
     </div>
-    <!-- /.container-fluid -->
+    
   </div>
-  <!-- /.container-fluid -->
+  
 </div>
-<!-- End of Main Content -->
-<!-- Footer -->
+
 <?php $this->load->view('backend/include/base_footer'); ?>
-<!-- End of Footer -->
-<!-- js -->
+
 <?php $this->load->view('backend/include/base_js'); ?>
 </body>
 </html>

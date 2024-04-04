@@ -44,12 +44,12 @@
       </div>
     </div>
   </div></div>
-  <!-- End of Main Content -->
   
-  <!-- Footer -->
+  
+  
   <?php $this->load->view('backend/include/base_footer'); ?>
-  <!-- End of Footer -->
-<!-- js -->
+  
+
 <?php $this->load->view('backend/include/base_js'); ?>
 </body>
 </html>

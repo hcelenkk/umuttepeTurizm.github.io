@@ -24,7 +24,7 @@
 		<!-- Basic Card Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">Add New Admin</h6>
+				<h6 class="m-0 font-weight-bold text-primary">Yeni Admin Ekle</h6>
 			</div>
 			<div class="card-body">
 				<div class="card-body">
@@ -63,9 +63,9 @@
 									</select>
 								</div>
 								<?= form_error('sifre'),'<small class="text-danger pl-3">','</small>'; ?>
-								<a href="<?= base_url('backend/admin')?>" class="btn btn-danger">Go Back</a>
+								<a href="<?= base_url('backend/admin')?>" class="btn btn-danger">Geri Git</a>
 								<button type="submit" class="btn btn-success float-right">
-								Add Account
+								Hesap Ekle
 								</button>
 							</form>
 						</div>
@@ -73,12 +73,12 @@
 				</div>
 			</div>
 		</div>
-		<!-- End of Main Content -->
+		
 		<!-- The Modal -->
-		<!-- Footer -->
+		
 		<?php $this->load->view('backend/include/base_footer'); ?>
-		<!-- End of Footer -->
-		<!-- js -->
+		
+		
 		<?php $this->load->view('backend/include/base_js'); ?>
 
 </body>

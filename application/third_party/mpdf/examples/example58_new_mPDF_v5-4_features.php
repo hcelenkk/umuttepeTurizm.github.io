@@ -136,7 +136,7 @@ table.zebra tfoot tr { background-color: #BBFFFF; }
 
 <h3>Bookmark styles<bookmark content="Bookmark styles" level="0" /></h3>
 <div>
-<p>Bookmarks can be styled by adding code as below to your script. You can define a colour (array of RGB) and/or a font-style (B, I, or BI) for each level (starting at 0). Results may depend on the PDF Reader you are using.</p>
+<p>Bookmarks can be styled by adding code as below to your script. You can define a colour (array of RGB) and/or a font-style (B, I, or BI) for each level (starting at 0). Results Mayis depend on the PDF Reader you are using.</p>
 <p class="code">
 $this->bookmarkStyles = array(<br />
  &nbsp; &nbsp; &nbsp; 0 => array(\'color\'=> array(0,64,128), \'style\'=>\'B\'),<br />

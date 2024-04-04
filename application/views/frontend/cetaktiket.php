@@ -139,7 +139,7 @@
         <ol type="1">
           <li>Umuttepe Turizm * Sadece otobüs bileti acenteleri. Otobüs hizmetini kendisi işletmez. Müşterilere kapsamlı bir otobüs operatörü, kalkış saati ve fiyat seçeneği sunmak için birçok otobüs operatörüyle bağlantı kurdu.
           Umuttepe Turizm'in müşterilerine tavsiyesi, tanıdıkları ve hizmetinden memnun oldukları otobüs işletmesini tercih etmeleridir.</li>
-          <li>bilette belirtilen kalkış saati yalnızca geçici bir zamandır. Ancak otobüs bilette belirtilen saatten önce kaynaktan ayrılmayacaktır. Yolcuların otobüse binerken aşağıdakileri sağlamaları gerekmektedir:
+          <li>bilette belirtilen kalkış saati yalnızca geçici bir zamandır. Ancak otobüs bilette belirtilen saatten önce kaynaktan ayrılMayisacaktır. Yolcuların otobüse binerken aşağıdakileri sağlamaları gerekmektedir:
             (1) biletin kopyası (tiketi yazdırın veya tiket e-postasını yazdırın).
             (2) Geçerli kimlik belgesi Bunu yapmadıkları takdirde otobüse binmelerine izin verilmeyebilir.</li>
            <li>Umuttepe Turizm'in sorumlulukları şunları içerir:
@@ -152,7 +152,7 @@
         (2) Otobüs operatörünün vb. koltuğu müşteriye uymuyor
         umut
         (3) Müşterinin bagajının kaybolması/çalınması/hasar görmesi
-        (4) Otobüs işletmecisi biniş noktasını değiştirir ve/veya karşılamayı kullanır
+        (4) Otobüs işletmecisi biniş noktasını değiştirir ve/veya karşılaMayisı kullanır
         Birisinin banka hesabına geri yatırılması için para iadesine ihtiyacı varsa lütfen
         Nakit kupon bilgilerinizi support@umuttepeturizm.web adresine yazınız.</li>
         </ol>  

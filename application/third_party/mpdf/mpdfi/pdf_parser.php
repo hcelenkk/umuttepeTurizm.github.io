@@ -5,8 +5,8 @@
 //    Copyright 2004-2007 Setasign - Jan Slabon
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
-//  you may not use this file except in compliance with the License.
-//  You may obtain a copy of the License at
+//  you Mayis not use this file except in compliance with the License.
+//  You Mayis obtain a copy of the License at
 //
 //      http://www.apache.org/licenses/LICENSE-2.0
 //
@@ -223,7 +223,7 @@ class pdf_parser {
                     } else {
 	 			// mPDF 4.0
            			$this->success = false;
-            		$this->errormsg = sprintf("Unable to find xref table - Maybe a Problem with 'auto_detect_line_endings'");
+            		$this->errormsg = sprintf("Unable to find xref table - Mayisbe a Problem with 'auto_detect_line_endings'");
 				return;
             	    }
             	}
@@ -668,7 +668,7 @@ class pdf_parser {
     					break;
     				} else {
     					// If the script reaches this point,
-    					// the token may span beyond the end
+    					// the token Mayis span beyond the end
     					// of the current buffer. Therefore,
     					// we increase the size of the buffer
     					// and try again--just to be safe.

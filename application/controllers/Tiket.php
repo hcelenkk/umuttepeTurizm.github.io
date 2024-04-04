@@ -81,7 +81,7 @@ class Tiket extends CI_Controller {
 		if ($data['kursi']) {
 			$this->load->view('frontend/beli_step2', $data);
 		}else{
-			$this->session->set_flashdata('message', 'swal("Empty", "Choose Your Seat", "error");');
+			$this->session->set_flashdata('message', 'swal("Empty", "Koltuk Seçin", "error");');
 			redirect('tiket/beforebeli/'.$data['asal'].'/'.$data['saatKodu']);
 		}
 	}
@@ -145,7 +145,7 @@ class Tiket extends CI_Controller {
 			$data['count'] = count($sqlcek);
 			$this->load->view('frontend/payment',$data);
 		}else{
-			//$this->session->set_flashdata('message', 'swal("Empty", "tiket Bulunamadı", "error");');
+			//$this->session->set_flashdata('message', 'swal("Empty", "Bilet Bulunamadı", "error");');
     		redirect('tiket/cektiket');
 		}
 	}
@@ -170,8 +170,8 @@ class Tiket extends CI_Controller {
                'charset'   => 'utf-8',
                'protocol'  => 'smtp',
                'smtp_host' => 'ssl://smtp.gmail.com',
-               'smtp_user' => 'demo@email.com',    // Ganti dengan email gmail kamu
-               'smtp_pass' => 'P@$$\/\/0RD',      // Password gmail kamu
+               'smtp_user' => 'demo@email.com',    
+               'smtp_pass' => 'P@$$\/\/0RD',      
                'smtp_port' => 465,
 		   ];
         $this->load->library('email', $config);
@@ -181,11 +181,11 @@ class Tiket extends CI_Controller {
         $this->email->subject($subject);
         $this->email->message($message);
         if ($this->email->send()) {
-			$this->session->set_flashdata('message', 'swal("Success", "Please proceed towards payment confirmation!", "success");');
+			$this->session->set_flashdata('message', 'swal("Success", "Lütfen ödeme onayına doğru ilerleyin!", "success");');
             $this->load->view('frontend/checkout', $data);
         } else {
 		//    echo 'Error! Send an error email';
-		$this->session->set_flashdata('message', 'swal("Success", "Please proceed towards payment confirmation!", "success");');
+		$this->session->set_flashdata('message', 'swal("Success", "Lütfen ödeme onayına doğru ilerleyin!", "success");');
             $this->load->view('frontend/checkout', $data);
         }
 	}
@@ -194,7 +194,7 @@ class Tiket extends CI_Controller {
 		$id = $this->input->post('kodetiket');
 		$sqlcek = $this->db->query("SELECT * FROM tbl_rezervasyon LEFT JOIN tbl_otobus on tbl_rezervasyon.otobusKodu = tbl_otobus.otobusKodu LEFT JOIN tbl_saat on tbl_rezervasyon.saatKodu = tbl_saat.saatKodu WHERE rezervasyonKodu ='".$id."'")->result_array();
 		if ($sqlcek == NULL) {
-			$this->session->set_flashdata('message', 'swal("Kosong", "Tidak Ada Tiket", "error");');
+			$this->session->set_flashdata('message', 'swal("Kosong", "Bilet bulunamadı", "error");');
     		redirect('tiket/cektiket');
 		}else{
 			$data['tiket'] = $sqlcek;
@@ -214,7 +214,7 @@ class Tiket extends CI_Controller {
 		$this->load->library('upload', $config);
 		if ( ! $this->upload->do_upload('userfile')){
 			$error = array('error' => $this->upload->display_errors());
-			$this->session->set_flashdata('message', 'swal("Fail", "Check Your Confirmation Again", "error");');
+			$this->session->set_flashdata('message', 'swal("Fail", "Onayınızı Tekrar Kontrol Edin", "error");');
 			redirect('tiket/konfirmasi/'.$this->input->post('rezervasyonKodu').'/'.$this->input->post('total'));
 		}
 		else{
@@ -230,7 +230,7 @@ class Tiket extends CI_Controller {
 						'dogrulamaFoto' => $featured_image
 					);
 			$this->db->insert('tbl_dogrulama', $data);
-			$this->session->set_flashdata('message', 'swal("Success", "Thank you. Please wait for the verification!", "success");');
+			$this->session->set_flashdata('message', 'swal("Success", "Doğrulama için lütfen bekleyin!", "success");');
 			redirect('profile/tiketsaya/'.$this->session->userdata('musteriKodu'));
 		}
 	}
@@ -244,6 +244,3 @@ class Tiket extends CI_Controller {
 	}
 
 }
-
-/* End of file Tiket.php */
-/* Location: ./application/controllers/Tiket.php */

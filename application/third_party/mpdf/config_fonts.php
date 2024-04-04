@@ -194,7 +194,7 @@ $this->fontdata = array(
 		'R' => "Quivira.otf",
 		'useOTL' => 0xFF,
 		),
-	"eeyekunicode" => array(	/* Meetei Mayek */
+	"eeyekunicode" => array(	/* Meetei Mayisek */
 		'R' => "Eeyek.ttf",
 		),
 	"lannaalif" => array(		/* Tai Tham */

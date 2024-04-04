@@ -1,33 +1,15 @@
 <?php (! defined('BASEPATH')) and exit('No direct script access allowed');
 
-/**
- * CodeIgniter Recaptcha library
- *
- * @package CodeIgniter
- * @author  Bo-Yi Wu <appleboy.tw@gmail.com>
- * @link    https://github.com/appleboy/CodeIgniter-reCAPTCHA
- */
 class Recaptcha
 {
-    /**
-     * ci instance object
-     *
-     */
     private $_ci;
 
-    /**
-     * reCAPTCHA site up, verify and api url.
-     *
-     */
+
     const sign_up_url = 'https://www.google.com/recaptcha/admin';
     const site_verify_url = 'https://www.google.com/recaptcha/api/siteverify';
     const api_url = 'https://www.google.com/recaptcha/api.js';
 
-    /**
-     * constructor
-     *
-     * @param string $config
-     */
+    
     public function __construct()
     {
         $this->_ci = & get_instance();
@@ -43,11 +25,11 @@ class Recaptcha
     }
 
     /**
-     * Submits an HTTP GET to a reCAPTCHA server.
+     
      *
-     * @param array $data array of parameters to be sent.
+     * @param array 
      *
-     * @return array response
+     * @return array 
      */
     private function _submitHTTPGet($data)
     {
@@ -72,11 +54,9 @@ class Recaptcha
     }
 
     /**
-     * Calls the reCAPTCHA siteverify API to verify whether the user passes
-     * CAPTCHA test.
      *
-     * @param string $response response string from recaptcha verification.
-     * @param string $remoteIp IP address of end user.
+     * @param string 
+     * @param string 
      *
      * @return ReCaptchaResponse
      */
@@ -84,7 +64,7 @@ class Recaptcha
     {
         $remoteIp = (!empty($remoteIp)) ? $remoteIp : $this->_ci->input->ip_address();
 
-        // Discard empty solution submissions
+        
         if (empty($response)) {
             return array(
                 'success' => false,
@@ -100,7 +80,7 @@ class Recaptcha
             )
         );
 
-        // get reCAPTCHA server response
+        
         $responses = json_decode($getResponse, true);
 
         if (isset($responses['success']) and $responses['success'] == true) {
@@ -118,13 +98,6 @@ class Recaptcha
     }
 
     /**
-     * Render Script Tag
-     *
-     * onload: Optional.
-     * render: [explicit|onload] Optional.
-     * hl: Optional.
-     * see: https://developers.google.com/recaptcha/docs/display
-     *
      * @param array parameters.
      *
      * @return scripts
@@ -145,10 +118,6 @@ class Recaptcha
     }
 
     /**
-     * render the reCAPTCHA widget
-     *
-     * data-theme: dark|light
-     * data-type: audio|image
      *
      * @param array parameters.
      *

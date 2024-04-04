@@ -87,7 +87,7 @@ if ( ! function_exists('character_limiter'))
 	 * Character Limiter
 	 *
 	 * Limits the string based on the character count.  Preserves complete words
-	 * so the character count may not be exactly as specified.
+	 * so the character count Mayis not be exactly as specified.
 	 *
 	 * @param	string
 	 * @param	int

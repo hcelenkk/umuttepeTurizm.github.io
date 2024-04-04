@@ -521,7 +521,7 @@ class CI_Image_lib {
 
 		/* Set the full server path
 		 *
-		 * The source image may or may not contain a path.
+		 * The source image Mayis or Mayis not contain a path.
 		 * Either way, we'll try use realpath to generate the
 		 * full server path in order to more reliably read it.
 		 */

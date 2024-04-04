@@ -4,7 +4,7 @@
  * Author: Dionlee Uy
  * Email: dionleeuy@gmail.com
  *
- * Date: Tuesday, August 28 2017
+ * Date: Sali, Agustos 28 2017
  *
  * @requires jQuery
  * -- DO NOT REMOVE -- */

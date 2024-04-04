@@ -570,7 +570,7 @@ class CGIFIMAGE
 			break;
 		}
 
-		// SKIP DEFAULT AS DEFS MAY CHANGE
+		// SKIP DEFAULT AS DEFS Mayis CHANGE
 		$b = ord($data[0]);
 		$data = substr($data, 1);
 		$extLen++;

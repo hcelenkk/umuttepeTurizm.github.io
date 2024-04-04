@@ -15,13 +15,13 @@
     <?php $this->load->view('backend/include/base_nav'); ?>
     
     <div class="container-fluid">
-      <h1 class="h5 mb-2 text-gray-800">List of System Administrators</h1>
+      <h1 class="h5 mb-2 text-gray-800">Sistem Adminleri Listesi</h1>
       <!-- DataTales Example -->
       
       <div class="card shadow mb-4">
         <div class="card-header py-3">
            <a href="<?= base_url('backend/admin/daftar') ?>" class="btn btn-success pull-right" >
-           Add Access Account
+           Hesap Ekle
           </a>
         </div>
         <div class="card-body">
@@ -30,11 +30,11 @@
             <thead class="thead-dark">
                 <tr>
                   <th>#</th>
-                  <th>Admin Code</th>
-                  <th>Name</th>
-                  <th>Username</th>
+                  <th>Admin Kodu</th>
+                  <th>Ad</th>
+                  <th>Kullanıcı Adı</th>
                   <th>Email</th>
-                  <th>Level</th>
+                  <th>Seviye</th>
                   <!-- <th>Action</th> -->
                 </tr>
               </thead>
@@ -60,24 +60,23 @@
         </div>
       </div>
     </div>
-    <!-- /.container-fluid -->
+    
   </div>
-  <!-- /.container-fluid -->
+  
 </div>
-<!-- End of Main Content -->
-<!-- Footer -->
-<?php $this->load->view('backend/include/base_footer'); ?>
-<!-- End of Footer -->
-</div>
-<!-- End of Content Wrapper -->
-</div>
-<!-- End of Page Wrapper -->
 
-<!-- Scroll to Top Button-->
+<?php $this->load->view('backend/include/base_footer'); ?>
+
+</div>
+
+</div>
+
+
+
 <a class="scroll-to-top rounded" href="#page-top">
 <i class="fas fa-angle-up"></i>
 </a>
-<!-- js -->
+
 <?php $this->load->view('backend/include/base_js'); ?>
 </body>
 </html>

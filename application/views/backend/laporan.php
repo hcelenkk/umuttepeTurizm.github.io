@@ -46,7 +46,7 @@
         </div>
     </div>
     <!-- /.row -->
-    <!-- ============ MODAL ADD =============== -->
+    
     <div class="modal fade" id="lap_jual_pertanggal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -87,7 +87,7 @@
         </div>
     </div>
     
-    <!-- ============ MODAL ADD =============== -->
+    
     <div class="modal fade" id="lap_jual_perbulan" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -117,20 +117,20 @@
             </div>
         </div>
     </div>
-    <!-- End of Main Content -->
-    <!-- Footer -->
+    
+    
     <?php $this->load->view('backend/include/base_footer'); ?>
-    <!-- End of Footer -->
+    
 </div>
-<!-- End of Content Wrapper -->
-</div>
-<!-- End of Page Wrapper -->
 
-<!-- Scroll to Top Button-->
+</div>
+
+
+
 <a class="scroll-to-top rounded" href="#page-top">
 <i class="fas fa-angle-up"></i>
 </a>
-<!-- js -->
+
 <?php $this->load->view('backend/include/base_js'); ?>
 <script type="text/javascript">
              $(function(){

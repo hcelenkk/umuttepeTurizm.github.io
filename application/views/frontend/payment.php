@@ -128,7 +128,7 @@
 				
 				<!-- start footer Area -->
 				<?php $this->load->view('frontend/include/base_footer'); ?>
-				<!-- js -->
+				
 				<?php $expired1 = tanggal_ing(date('Y-m-d',strtotime($tiket[0]['rezervasyonSonGecerlilik']))).', '.date('Y',strtotime($tiket[0]['rezervasyonSonGecerlilik'])).' '.date('H:i',strtotime($tiket[0]['rezervasyonSonGecerlilik']))?>
 				<script>
 				function myFunction() {

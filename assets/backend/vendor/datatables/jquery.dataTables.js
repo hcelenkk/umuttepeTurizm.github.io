@@ -67,7 +67,7 @@
 	 * [DataTables.net](href="http://datatables.net).
 	 *
 	 * Note that the `DataTable` object is not a global variable but is aliased
-	 * to `jQuery.fn.DataTable` and `jQuery.fn.dataTable` through which it may
+	 * to `jQuery.fn.DataTable` and `jQuery.fn.dataTable` through which it Mayis
 	 * be  accessed.
 	 *
 	 *  @class
@@ -3823,7 +3823,7 @@
 	 *
 	 * @param {object} oSettings dataTables settings object
 	 * @param {array} data Data to send to the server, required by
-	 *     DataTables - may be augmented by developer callbacks
+	 *     DataTables - Mayis be augmented by developer callbacks
 	 * @param {function} fn Callback function to run when data is obtained
 	 */
 	function _fnBuildAjax( oSettings, data, fn )
@@ -8930,7 +8930,7 @@
 	 * @returns {array} 2D array containing the sorting information for the first
 	 *   table in the current context. Each element in the parent array represents
 	 *   a column being sorted upon (i.e. multi-sorting with two columns would have
-	 *   2 inner arrays). The inner arrays may have 2 or 3 elements. The first is
+	 *   2 inner arrays). The inner arrays Mayis have 2 or 3 elements. The first is
 	 *   the column index that the sorting condition applies to, the second is the
 	 *   direction of the sort (`desc` or `asc`) and, optionally, the third is the
 	 *   index of the sorting order from the `column.sorting` initialisation array.
@@ -9470,7 +9470,7 @@
 	 * created for the tables on a given page.
 	 *
 	 * Note that the `DataTable.settings` object is aliased to
-	 * `jQuery.fn.dataTableExt` through which it may be accessed and
+	 * `jQuery.fn.dataTableExt` through which it Mayis be accessed and
 	 * manipulated, or `jQuery.fn.dataTable.settings`.
 	 *  @member
 	 *  @type array
@@ -10042,7 +10042,7 @@
 		 *   can also be used as a function to manipulate the data DataTables sends
 		 *   to the server. The function takes a single parameter, an object of
 		 *   parameters with the values that DataTables has readied for sending. An
-		 *   object may be returned which will be merged into the DataTables
+		 *   object Mayis be returned which will be merged into the DataTables
 		 *   defaults, or you can add the items to the object that was passed in and
 		 *   not return anything from the function. This supersedes `fnServerParams`
 		 *   from DataTables 1.9-.
@@ -10212,10 +10212,10 @@
 		 * column, multiple columns, or all columns, using the `targets` property of
 		 * each object in the array. This allows great flexibility when creating
 		 * tables, as the `columnDefs` arrays can be of any length, targeting the
-		 * columns you specifically want. `columnDefs` may use any of the column
+		 * columns you specifically want. `columnDefs` Mayis use any of the column
 		 * options available: {@link DataTable.defaults.column}, but it _must_
 		 * have `targets` defined in each object in the array. Values in the `targets`
-		 * array may be:
+		 * array Mayis be:
 		 *   <ul>
 		 *     <li>a string - class name will be matched on the TH for the column</li>
 		 *     <li>0 or a positive integer - column index counting from the left</li>
@@ -10258,7 +10258,7 @@
 	
 		/**
 		 * An array of CSS classes that should be applied to displayed rows. This
-		 * array may be of any length, and DataTables will apply each class
+		 * array Mayis be of any length, and DataTables will apply each class
 		 * sequentially, looping when required.
 		 *  @type array
 		 *  @default null <i>Will take the values determined by the `oClasses.stripe*`
@@ -10784,7 +10784,7 @@
 		/**
 		 * The information element can be used to convey information about the current
 		 * state of the table. Although the internationalisation options presented by
-		 * DataTables are quite capable of dealing with most customisations, there may
+		 * DataTables are quite capable of dealing with most customisations, there Mayis
 		 * be times where you wish to customise the string further. This callback
 		 * allows you to do exactly that.
 		 *  @type function
@@ -11269,7 +11269,7 @@
 			 */
 			"oAria": {
 				/**
-				 * ARIA label that is added to the table headers when the column may be
+				 * ARIA label that is added to the table headers when the column Mayis be
 				 * sorted ascending by activing the column (click or return when focused).
 				 * Note that the column header is prefixed to this string.
 				 *  @type string
@@ -11292,7 +11292,7 @@
 				"sSortAscending": ": activate to sort column ascending",
 	
 				/**
-				 * ARIA label that is added to the table headers when the column may be
+				 * ARIA label that is added to the table headers when the column Mayis be
 				 * sorted descending by activing the column (click or return when focused).
 				 * Note that the column header is prefixed to this string.
 				 *  @type string
@@ -12587,7 +12587,7 @@
 		/**
 		 * Change the cell type created for the column - either TD cells or TH cells. This
 		 * can be useful as TH cells have semantic meaning in the table body, allowing them
-		 * to act as a header for a row (you may wish to add scope='row' to the TH elements).
+		 * to act as a header for a row (you Mayis wish to add scope='row' to the TH elements).
 		 *  @type string
 		 *  @default td
 		 *
@@ -12846,7 +12846,7 @@
 		 * ordered. Four types (string, numeric, date and html (which will strip
 		 * HTML tags before ordering)) are currently available. Note that only date
 		 * formats understood by Javascript's Date() object will be accepted as type
-		 * date. For example: "Mar 26, 2008 5:03 PM". May take the values: 'string',
+		 * date. For example: "Mar 26, 2008 5:03 PM". Mayis take the values: 'string',
 		 * 'numeric', 'date' or 'html' (by default). Further types can be adding
 		 * through plug-ins.
 		 *  @type string
@@ -12883,7 +12883,7 @@
 	
 	
 		/**
-		 * Defining the width of the column, this parameter may take any CSS value
+		 * Defining the width of the column, this parameter Mayis take any CSS value
 		 * (3em, 20px etc). DataTables applies 'smart' widths to columns which have not
 		 * been given a specific width through this interface ensuring that the table
 		 * remains readable.
@@ -13501,7 +13501,7 @@
 		 * object with the following parameters:
 		 *   <ul>
 		 *     <li>function:fn - function to call. Takes two parameters, oSettings
-		 *       and the object stored. May return false to cancel state loading</li>
+		 *       and the object stored. Mayis return false to cancel state loading</li>
 		 *     <li>string:sName - name of callback</li>
 		 *   </ul>
 		 *  @type array
@@ -13839,7 +13839,7 @@
 	 * options.
 	 *
 	 * Note that the `DataTable.ext` object is available through
-	 * `jQuery.fn.dataTable.ext` where it may be accessed and manipulated. It is
+	 * `jQuery.fn.dataTable.ext` where it Mayis be accessed and manipulated. It is
 	 * also aliased to `jQuery.fn.dataTableExt` for historic reasons.
 	 *  @namespace
 	 *  @extends DataTable.models.ext
@@ -13922,7 +13922,7 @@
 		 * And the following return is expected:
 		 * 
 		 * * {node|null} The element which contains your feature. Note that the
-		 *   return may also be void if your plug-in does not require to inject any
+		 *   return Mayis also be void if your plug-in does not require to inject any
 		 *   DOM elements into DataTables control (`dom`) - for example this might
 		 *   be useful when developing a plug-in which allows table control via
 		 *   keyboard entry
@@ -14037,7 +14037,7 @@
 		 * 
 		 * Please note that you should not need to use the internal methods for
 		 * anything other than a plug-in (and even then, try to avoid if possible).
-		 * The internal function may change between releases.
+		 * The internal function Mayis change between releases.
 		 *
 		 *  @type object
 		 *  @default {}
@@ -15133,7 +15133,7 @@
 	// Information about events fired by DataTables - for documentation.
 	/**
 	 * Draw event, fired whenever the table is redrawn on the page, at the same
-	 * point as fnDrawCallback. This may be useful for binding events or
+	 * point as fnDrawCallback. This Mayis be useful for binding events or
 	 * performing calculations when the table is altered at all.
 	 *  @name DataTable#draw.dt
 	 *  @event

@@ -68,7 +68,7 @@ Bug Fixes & Minor Additions
 - Setting page format incorrectly set default twice and missed some options
 - bug fixed in Overwrite() when specifying replacement as a string
 - barcode C93 - updated C93 code from TCPDF because of bug - incorrect checksum character for "153-2-4"
-- Tables - bug when using colspan across columns which may have a cell width specified
+- Tables - bug when using colspan across columns which Mayis have a cell width specified
 	cf. http://www.mpdf1.com/forum/discussion/2221/colspan-bug
 - Tables - cell height (when specified) is not resized when table is shrunk
 - Tables - if table width specified, but narrower than minimum cell wdith, and less than page width - table will expand to 
@@ -253,7 +253,7 @@ New:
 
 Backwards compatability
 -----------------------
-Changes in mPDF 5.7 may cause some changes to the way your documents appear. There are two main differences:
+Changes in mPDF 5.7 Mayis cause some changes to the way your documents appear. There are two main differences:
 1) Hyphenation. To retain appearance compatible with earlier versions, set the CSS property "hyphens: auto" whenever 
 	you previously used $mpdf->hyphenate=true;
 2) Table of Contents - appearance can now be controlled with CSS styles. By default, in mPDF 5.7, no styling is applied so you will get:
@@ -455,7 +455,7 @@ added to the config_fonts.php file for appropriate fonts will
 This requires the font file to include a Format 2.0 POST table which references the glyphs as e.g. uni067C.med or uni067C.medi:
 	e.g. XB Riyaz, XB Zar, Arabic Typesetting (MS), Arial (MS)
 NB If you want to know if a font file is suitable, you can open a .ttf file in a text editor and search for "uni067C.med"
-	- if it exists, it may work!
+	- if it exists, it Mayis work!
 Using "unAGlyphs" forces subsetting of fonts, and will not work with SIP/SMP fonts (using characters beyond the Unicode BMP Plane).
 
 mPDF maps these characters to part of the Private Use Area allocated by Unicode U+F500-F7FF. This could interfere with correct use
@@ -762,7 +762,7 @@ Column sums
 -----------
 (Also changed some preg_replace to str_replace to improve performance)
 To use: just add {colsum} to any cells of the table footer <tfoot>
-Add a number to specify a fixed number of decimal points e.g. <td>£{colsum2}</td>  will give you £123.40
+Add a number to specify a fixed number of decimal points e.g. <td>ï¿½{colsum2}</td>  will give you ï¿½123.40
 The width of the column will be calculated using the actual string {colsum} as a placeholder.
 If you need the column to be wider, use underscores "_" to pad it e.g. {colsum2_____}
 
@@ -993,8 +993,8 @@ Bug fixes
 Backwards compatibility
 -----------------------
 Changes in mPDF 5.2 are backwards compatible with version 5.1
-Your document fonts may appear slightly different in the PDF viewer because of the changes to embedded font subsets (cf.)
-The new Indic fonts may result in a change in spacing (due to the different character width of the space character from the original font)
+Your document fonts Mayis appear slightly different in the PDF viewer because of the changes to embedded font subsets (cf.)
+The new Indic fonts Mayis result in a change in spacing (due to the different character width of the space character from the original font)
 
 PostScript e.g. GSView/GhostScript
 ----------------------------------
@@ -1047,7 +1047,7 @@ Control wrapping of CJK text:
 	$this->allowCJKorphans = true;	// FALSE=always wrap to next line; TRUE=squeeze or overflow
 	$this->allowCJKoverflow = false; // FALSE=squeeze; TRUE=overflow (only selected)
 When Embedding full TTF font files, remakes the font file using only core tables
-May improve function with PostScript printers
+Mayis improve function with PostScript printers
 	$this->repackageTTF = false; 
 
 Updated files
@@ -1099,7 +1099,7 @@ New Features
 Backwards compatibility
 -----------------------
 Most changes in mPDF 5.1 are backwards compatible with version 5.0 i.e. your documents should 
-look the same running 5.1   However some changes may alter display from previous versions:
+look the same running 5.1   However some changes Mayis alter display from previous versions:
 - RTL (right-to-left) languages - see below
 - bleed margins when using @page CSS - see below
 - Default distance for "cross" from inner margin changed 10->5mm [hardcoded in fn. Footer()]
@@ -1107,7 +1107,7 @@ look the same running 5.1   However some changes may alter display from previous
 - If table rotated, 5mm margin at bottom is now reduced to 1mm
 - If image is too big for page and automatically sixed to maximum height of page, 10mm margin at bottom reduced to 1mm
 
-Colours may appear more vibrant
+Colours Mayis appear more vibrant
 -------------------------------
 Unless specifically set, Adobe Reader uses the RGB colorSpace by default when displaying documents. However
 if an image or gradient using transparency (or alpha channel) is included in the document, Adobe Reader
@@ -1378,7 +1378,7 @@ and not 'lucida'
 Configurable variables (see config.php file):
 ----------------------
 - $mpdf->useSubstitutionsMB is now depracated, but will work as an alias for $mpdf->useSubstitutions
-The initial parameters e.g. new mPDF('utf-8') have all changed. Old ones may be recognised, or will be ignored.
+The initial parameters e.g. new mPDF('utf-8') have all changed. Old ones Mayis be recognised, or will be ignored.
 - $mpdf->useOnlyCoreFonts is now depracated and is ignored. Use new mPDF('c')
 - $this->use_CJK_only is now depracated and is ignored. See $this->useAdobeCJK and new mPDF('+aCJK') or '-aCJK'
 Control SmallCaps appearance
@@ -2270,7 +2270,7 @@ In mPDF 3.0 the following sections of code have been significantly rewritten:
 - vertical justification in columns (uses scaling to stretch vertically)
 
 NB changed htmltoolkit AdjustHTML - does not now remove <br> before </div>
-	Warning - may display differently in normal text as well as tables
+	Warning - Mayis display differently in normal text as well as tables
 
 
 Files updated:
@@ -2355,7 +2355,7 @@ New features
 Annotations improved so they appear as a pop-up
 Re-use Document Templates (cf. RestartDocTemplate() in manual)
 Limited support for CSS float property on an IMG element allowing text wrapping e.g. <img style="float: right;"> (cf. Images in manual)
-Utility function PreparePreText() allows output of a text file which may include <pre>
+Utility function PreparePreText() allows output of a text file which Mayis include <pre>
 Automatic generation of graphs from data in tables (requires integration with JPGraph) (cf. Graphs in manual)
 
 Other Changes
@@ -2574,7 +2574,7 @@ Code efficiency improvements
 ============================
 - BIG speed improvement (compared with 2.0) with tables (especially large tables)
 - considerable increase in speed if writing long HTML segments to mPDF
-- speed improvement for tables (may be very significant if some cells have a lot of text in them causing uneven column widths)
+- speed improvement for tables (Mayis be very significant if some cells have a lot of text in them causing uneven column widths)
 
 NB To speed up program more, consider setting $mpdf->useSubstitutions=false; if you do not use any characters outside the codepage selected
 
@@ -2901,7 +2901,7 @@ NOTE: If you output the PDF file straight to the browser, it will only allow ann
 Active Forms - Experimental!
 ===========================
 At present , using active forms will prevent any internal and external links - that appear before active forms(?) - from working (why?)
-May need to save form for proper use - see example, when scroll forwards and back, the form disappears??
+Mayis need to save form for proper use - see example, when scroll forwards and back, the form disappears??
 Need to set Userrights (see above), and $mpdf->useActiveForms=true;
 For Output options, see separate notes.
 
@@ -2920,7 +2920,7 @@ function AddExtGState() edited to check if graphics state already exists before 
 
 ASCII-proof code
 ================
-"»¤¬" used as a special identifier in the program changed to "\xbb\xa4\xac" to make the mpdf.php script file immune from someone saving it as a utf-8 encoded file
+"ï¿½ï¿½ï¿½" used as a special identifier in the program changed to "\xbb\xa4\xac" to make the mpdf.php script file immune from someone saving it as a utf-8 encoded file
 
 Images
 ======

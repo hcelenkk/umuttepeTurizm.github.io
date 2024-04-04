@@ -103,7 +103,7 @@ if (!$pdf) {
 
 foreach ($tempfontdata AS $fname => $v) {
 	if (!isset($tempfontdata[$fname]['R']) || !$tempfontdata[$fname]['R']) {
-		if (!$pdf) echo 'WARNING - Font file for '.$fname.' may be an italic cursive script, or extra-bold etc.<br />';
+		if (!$pdf) echo 'WARNING - Font file for '.$fname.' Mayis be an italic cursive script, or extra-bold etc.<br />';
 		if (isset($tempfontdata[$fname]['I']) && $tempfontdata[$fname]['I']) {
 			$tempfontdata[$fname]['R'] = $tempfontdata[$fname]['I'];
 		}

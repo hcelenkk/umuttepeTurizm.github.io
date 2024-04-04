@@ -38,7 +38,7 @@ The default string format of the date is `mm/dd/yyyy`. You can specify the forma
   });
 </script>
 ```
-The above code will output a date in this format `mm-dd-yyyy`, for example: `10-31-2016` - which is October 31, 2016.
+The above code will output a date in this format `mm-dd-yyyy`, for example: `10-31-2016` - which is Ekim 31, 2016.
 You can specify other format you want, like `mmm dd, yyyy` which would output something like `Oct 01, 2016`.
 
 | Variable      | Code         | Output  |
@@ -46,7 +46,7 @@ You can specify other format you want, like `mmm dd, yyyy` which would output so
 | Month         | `m`          | 1       |
 |               | `mm`         | 01      |
 |               | `mmm`        | Jan     |
-|               | `mmmm`       | January |
+|               | `mmmm`       | Ocak |
 | Date          | `d`          | 1       |
 |               | `dd`         | 01      |
 | Year          | `yy`         | 16      |
@@ -57,13 +57,13 @@ You can also specify the mininum and/or maximum date the user can select on othe
 Just specify `data-mindate` and/or `data-maxdate` attributes on your `input` element. The acceptable values for these attributes are `today` or a specific date using this format: `mm/dd/yyyy`:
 ```html
 <input type="text" id="datepicker" data-mindate="today"/>       //Dates enabled ranges from the current date onwards.
-<input type="text" id="datepicker" data-mindate="10/30/2016"/>  //Dates enabled ranges from October 30, 2016 onwards.
+<input type="text" id="datepicker" data-mindate="10/30/2016"/>  //Dates enabled ranges from Ekim 30, 2016 onwards.
 <input type="text" id="datepicker" data-maxdate="today"/>       //Dates enabled ranges from earlier dates until current date.
-<input type="text" id="datepicker" data-maxdate="10/30/2016"/>  //Dates enabled ranges from previous dates of October 10, 2016 until October 10, 2016
+<input type="text" id="datepicker" data-maxdate="10/30/2016"/>  //Dates enabled ranges from previous dates of Ekim 10, 2016 until Ekim 10, 2016
 ```
 You can also specify the mininum and maximum date to create a specific date range acceptable:
 ```html
-<input type="text" id="datepicker" data-mindate="1/1/2016" data-maxdate="2/1/2016"/>  //Dates enabled ranges from January 1 to February 1, 2016
+<input type="text" id="datepicker" data-mindate="1/1/2016" data-maxdate="2/1/2016"/>  //Dates enabled ranges from Ocak 1 to Subat 1, 2016
 ```
 
 ## Range From and To
@@ -90,7 +90,7 @@ You can use this to get the new date value:
   });
 </script>
 ```
-The above code will alert the new date selected. For example: `01-16-2016` or January 16, 2016
+The above code will alert the new date selected. For example: `01-16-2016` or Ocak 16, 2016
 
 ## Themes
 You can specify the color theme of the date picker by adding `theme` option upon initialization:

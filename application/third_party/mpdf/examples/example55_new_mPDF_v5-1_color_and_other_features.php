@@ -207,10 +207,10 @@ $this-&gt;nonPrintMargin<br />
 <div style="font-family: Arial; font-size: 18pt; color: rgb(49,124,209)">Colorspace and colour conversion </div>
 
 <div class="rounded text">PDF files can contain objects using different colorSpaces e.g. Grayscale, RGB and CMYK. By default,
-mPDF creates PDF files using the colours as they are specified: font colour may be set (e.g. #880000) as an RGB colour, and the 
-file may contain JPG images in RGB or CMYK format.
+mPDF creates PDF files using the colours as they are specified: font colour Mayis be set (e.g. #880000) as an RGB colour, and the 
+file Mayis contain JPG images in RGB or CMYK format.
 <br />
-In some circumstances, you may wish to create a PDF file with restricted colorSpaces e.g. printers will often want files 
+In some circumstances, you Mayis wish to create a PDF file with restricted colorSpaces e.g. printers will often want files 
 which contain only CMYK, spot colours, or grayscale, but <i>not</i> RGB.
 <br />
 Additional methods for defining colours can be used (see above), but alternatively you can set mPDF to restrict the colorSpace by setting 
@@ -223,7 +223,7 @@ the value for $mpdf-&gt;restrictColorSpace:
 3 - allow CMYK / SPOT COLORS / Grayscale [converts RGB->CMYK]
 <br />
 This will attempt to convert every colour value used in the document to the permitted colorSpace(s). Almost everything including images
-will be converted (except BMP images), and the conversion of images may take significant time.
+will be converted (except BMP images), and the conversion of images Mayis take significant time.
 <br />
 This example file is set to (3) CMYK; compare the appearance of the Tux penguin in this file and in the previous example file (RGB).
 </div>

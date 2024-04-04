@@ -131,7 +131,7 @@ function Gradient($x, $y, $w, $h, $type, $stops=array(), $colorspace='RGB', $coo
 		}
 
 		// If both a <point> and <angle> are defined, the gradient axis starts from the point and runs along the angle. The end point is 
-		// defined as before - in this case start points may not be in corners, and axis may not correctly fall in the right quadrant.
+		// defined as before - in this case start points Mayis not be in corners, and axis Mayis not correctly fall in the right quadrant.
 		// NO end points (Angle defined & Start points)
 		else if ($angle!==false && $coords[0]!==false && $coords[1]!==false && $coords[2]===false && $coords[3]===false) {
 		  if ($angle==0 || $angle==360) { $coords[3]=$coords[1]; if ($coords[0]==1) $coords[2]=2; else $coords[2]=1; }

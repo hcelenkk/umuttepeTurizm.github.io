@@ -54,24 +54,23 @@
         </div>
       </div>
     </div>
-    <!-- /.container-fluid -->
+    
   </div>
-  <!-- /.container-fluid -->
+  
 </div>
-<!-- End of Main Content -->
-<!-- Footer -->
-<?php $this->load->view('backend/include/base_footer'); ?>
-<!-- End of Footer -->
-</div>
-<!-- End of Content Wrapper -->
-</div>
-<!-- End of Page Wrapper -->
 
-<!-- Scroll to Top Button-->
+<?php $this->load->view('backend/include/base_footer'); ?>
+
+</div>
+
+</div>
+
+
+
 <a class="scroll-to-top rounded" href="#page-top">
 <i class="fas fa-angle-up"></i>
 </a>
-<!-- js -->
+
 <?php $this->load->view('backend/include/base_js'); ?>
 </body>
 </html>

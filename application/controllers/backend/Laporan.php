@@ -43,7 +43,3 @@ class Laporan extends CI_Controller {
 		// $this->load->view('backend/laporan/laporan_pertanggal', $data);
 	}
 }
-
-/* End of file Laporan.php */
-
-/* Location: ./application/controllers/backend/Laporan.php */

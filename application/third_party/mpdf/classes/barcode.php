@@ -26,54 +26,54 @@ class PDFBarcode {
 		switch (strtoupper($type)) {
 			case 'ISBN':
 			case 'ISSN':
-			case 'EAN13': { // EAN 13
+			case 'EAN13': { 
 				$arrcode = $this->barcode_eanupc($code, 13);
-				$arrcode['lightmL'] = 11;	// LEFT light margin =  x X-dim (http://www.gs1uk.org)
-				$arrcode['lightmR'] = 7;	// RIGHT light margin =  x X-dim (http://www.gs1uk.org)
-				$arrcode['nom-X'] = 0.33;	// Nominal value for X-dim in mm (http://www.gs1uk.org)
-				$arrcode['nom-H'] = 25.93;	// Nominal bar height in mm incl. numerals (http://www.gs1uk.org)
+				$arrcode['lightmL'] = 11;	
+				$arrcode['lightmR'] = 7;	
+				$arrcode['nom-X'] = 0.33;	
+				$arrcode['nom-H'] = 25.93;	
 				break;
 			}
-			case 'UPCA': { // UPC-A
+			case 'UPCA': { 
 				$arrcode = $this->barcode_eanupc($code, 12);
-				$arrcode['lightmL'] = 9;	// LEFT light margin =  x X-dim (http://www.gs1uk.org)
-				$arrcode['lightmR'] = 9;	// RIGHT light margin =  x X-dim (http://www.gs1uk.org)
-				$arrcode['nom-X'] = 0.33;	// Nominal value for X-dim in mm (http://www.gs1uk.org)
-				$arrcode['nom-H'] = 25.91;	// Nominal bar height in mm incl. numerals (http://www.gs1uk.org)
+				$arrcode['lightmL'] = 9;	
+				$arrcode['lightmR'] = 9;	
+				$arrcode['nom-X'] = 0.33;	
+				$arrcode['nom-H'] = 25.91;	
 				break;
 			}
-			case 'UPCE': { // UPC-E
+			case 'UPCE': { 
 				$arrcode = $this->barcode_eanupc($code, 6);
-				$arrcode['lightmL'] = 9;	// LEFT light margin =  x X-dim (http://www.gs1uk.org)
-				$arrcode['lightmR'] = 7;	// RIGHT light margin =  x X-dim (http://www.gs1uk.org)
-				$arrcode['nom-X'] = 0.33;	// Nominal value for X-dim in mm (http://www.gs1uk.org)
-				$arrcode['nom-H'] = 25.93;	// Nominal bar height in mm incl. numerals (http://www.gs1uk.org)
+				$arrcode['lightmL'] = 9;	
+				$arrcode['lightmR'] = 7;	
+				$arrcode['nom-X'] = 0.33;	
+				$arrcode['nom-H'] = 25.93;	
 				break;
 			}
-			case 'EAN8': { // EAN 8
+			case 'EAN8': { 
 				$arrcode = $this->barcode_eanupc($code, 8);
-				$arrcode['lightmL'] = 7;	// LEFT light margin =  x X-dim (http://www.gs1uk.org)
-				$arrcode['lightmR'] = 7;	// RIGHT light margin =  x X-dim (http://www.gs1uk.org)
-				$arrcode['nom-X'] = 0.33;	// Nominal value for X-dim in mm (http://www.gs1uk.org)
-				$arrcode['nom-H'] = 21.64;	// Nominal bar height in mm incl. numerals (http://www.gs1uk.org)
+				$arrcode['lightmL'] = 7;	
+				$arrcode['lightmR'] = 7;	
+				$arrcode['nom-X'] = 0.33;	
+				$arrcode['nom-H'] = 21.64;	
 				break;
 			}
-			case 'EAN2': { // 2-Digits UPC-Based Extention
+			case 'EAN2': { 
 				$arrcode = $this->barcode_eanext($code, 2);
-				$arrcode['lightmL'] = 7;	// LEFT light margin =  x X-dim (estimated)
-				$arrcode['lightmR'] = 7;	// RIGHT light margin =  x X-dim (estimated)
-				$arrcode['sepM'] = 9;		// SEPARATION margin =  x X-dim (http://web.archive.org/web/19990501035133/http://www.uc-council.org/d36-d.htm)
-				$arrcode['nom-X'] = 0.33;	// Nominal value for X-dim in mm (http://www.gs1uk.org)
-				$arrcode['nom-H'] = 20;	// Nominal bar height in mm incl. numerals (estimated) not used when combined
+				$arrcode['lightmL'] = 7;	
+				$arrcode['lightmR'] = 7;	
+				$arrcode['sepM'] = 9;		
+				$arrcode['nom-X'] = 0.33;	
+				$arrcode['nom-H'] = 20;	
 				break;
 			}
 			case 'EAN5': { // 5-Digits UPC-Based Extention
 				$arrcode = $this->barcode_eanext($code, 5);
-				$arrcode['lightmL'] = 7;	// LEFT light margin =  x X-dim (estimated)
-				$arrcode['lightmR'] = 7;	// RIGHT light margin =  x X-dim (estimated)
-				$arrcode['sepM'] = 9;		// SEPARATION margin =  x X-dim (http://web.archive.org/web/19990501035133/http://www.uc-council.org/d36-d.htm)
-				$arrcode['nom-X'] = 0.33;	// Nominal value for X-dim in mm (http://www.gs1uk.org)
-				$arrcode['nom-H'] = 20;	// Nominal bar height in mm incl. numerals (estimated) not used when combined
+				$arrcode['lightmL'] = 7;	
+				$arrcode['lightmR'] = 7;	
+				$arrcode['sepM'] = 9;		
+				$arrcode['nom-X'] = 0.33;	
+				$arrcode['nom-H'] = 20;	
 				break;
 			}
 
@@ -1226,11 +1226,7 @@ class PDFBarcode {
 		return $bararray;
 	}
 	
-	/**
-	 * UPC-Based Extentions
-	 * 2-Digit Ext.: Used to indicate magazines and newspaper issue numbers
-	 * 5-Digit Ext.: Used to mark suggested retail price of books
-	 */
+	
 	protected function barcode_eanext($code, $len=5) {
 		//Padding
 		$code = str_pad($code, $len, '0', STR_PAD_LEFT);
@@ -1684,7 +1680,7 @@ class PDFBarcode {
 	 * IMB - Intelligent Mail Barcode - Onecode - USPS-B-3200
 	 * (requires PHP bcmath extension) 
 	 * Intelligent Mail barcode is a 65-bar code for use on mail in the United States.
-	 * The fields are described as follows:<ul><li>The Barcode Identifier shall be assigned by USPS to encode the presort identification that is currently printed in human readable form on the optional endorsement line (OEL) as well as for future USPS use. This shall be two digits, with the second digit in the range of 0-4. The allowable encoding ranges shall be 00-04, 10-14, 20-24, 30-34, 40-44, 50-54, 60-64, 70-74, 80-84, and 90-94.</li><li>The Service Type Identifier shall be assigned by USPS for any combination of services requested on the mailpiece. The allowable encoding range shall be 000-999. Each 3-digit value shall correspond to a particular mail class with a particular combination of service(s). Each service program, such as OneCode Confirm and OneCode ACS, shall provide the list of Service Type Identifier values.</li><li>The Mailer or Customer Identifier shall be assigned by USPS as a unique, 6 or 9 digit number that identifies a business entity. The allowable encoding range for the 6 digit Mailer ID shall be 000000- 899999, while the allowable encoding range for the 9 digit Mailer ID shall be 900000000-999999999.</li><li>The Serial or Sequence Number shall be assigned by the mailer for uniquely identifying and tracking mailpieces. The allowable encoding range shall be 000000000-999999999 when used with a 6 digit Mailer ID and 000000-999999 when used with a 9 digit Mailer ID. e. The Delivery Point ZIP Code shall be assigned by the mailer for routing the mailpiece. This shall replace POSTNET for routing the mailpiece to its final delivery point. The length may be 0, 5, 9, or 11 digits. The allowable encoding ranges shall be no ZIP Code, 00000-99999,  000000000-999999999, and 00000000000-99999999999.</li></ul>
+	 * The fields are described as follows:<ul><li>The Barcode Identifier shall be assigned by USPS to encode the presort identification that is currently printed in human readable form on the optional endorsement line (OEL) as well as for future USPS use. This shall be two digits, with the second digit in the range of 0-4. The allowable encoding ranges shall be 00-04, 10-14, 20-24, 30-34, 40-44, 50-54, 60-64, 70-74, 80-84, and 90-94.</li><li>The Service Type Identifier shall be assigned by USPS for any combination of services requested on the mailpiece. The allowable encoding range shall be 000-999. Each 3-digit value shall correspond to a particular mail class with a particular combination of service(s). Each service program, such as OneCode Confirm and OneCode ACS, shall provide the list of Service Type Identifier values.</li><li>The Mailer or Customer Identifier shall be assigned by USPS as a unique, 6 or 9 digit number that identifies a business entity. The allowable encoding range for the 6 digit Mailer ID shall be 000000- 899999, while the allowable encoding range for the 9 digit Mailer ID shall be 900000000-999999999.</li><li>The Serial or Sequence Number shall be assigned by the mailer for uniquely identifying and tracking mailpieces. The allowable encoding range shall be 000000000-999999999 when used with a 6 digit Mailer ID and 000000-999999 when used with a 9 digit Mailer ID. e. The Delivery Point ZIP Code shall be assigned by the mailer for routing the mailpiece. This shall replace POSTNET for routing the mailpiece to its final delivery point. The length Mayis be 0, 5, 9, or 11 digits. The allowable encoding ranges shall be no ZIP Code, 00000-99999,  000000000-999999999, and 00000000000-99999999999.</li></ul>
 	 */
 	protected function barcode_imb($code) {
 		$asc_chr = array(4,0,2,6,3,5,1,9,8,7,1,2,0,6,4,8,2,9,5,3,0,1,3,7,4,6,8,9,2,0,5,1,9,4,3,8,6,7,1,2,4,3,9,5,7,8,3,0,2,1,4,0,9,1,7,0,2,4,6,3,7,1,9,5,8);

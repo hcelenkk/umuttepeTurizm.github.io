@@ -32,7 +32,7 @@ class Order extends CI_Controller {
 			// die(print_r($sqlcek));
 			$this->load->view('backend/view_order',$data);
 	 	}else{
-	 		$this->session->set_flashdata('message', 'swal("Empty", "No Order", "error");');
+	 		$this->session->set_flashdata('message', 'swal("Empty", "Rezervason Bulunamadı", "error");');
     		redirect('backend/tiket');
 	 	}
 	}
@@ -69,11 +69,11 @@ class Order extends CI_Controller {
 				'biletDurum' => $status,
 				'biletEtiket' => $pdfFilePath,
 				'biletOlusturmaTarihi' => date('Y-m-d'),
-				'biletOlusturmaYoneticisi' => $this->session->userdata('adminKullaniciAdi')
+				'biletOlusturMayisoneticisi' => $this->session->userdata('adminKullaniciAdi')
 			);
 		$this->db->insert('tbl_bilet', $simpan);
 		}
-		$this->session->set_flashdata('message', 'swal("Succeed", "Ticket Order Processed Successfully", "success");');
+		$this->session->set_flashdata('message', 'swal("Succeed", "Bilet Siparişi Başarıyla İşlendi", "success");');
 		redirect('backend/order');
 
 		
@@ -95,8 +95,8 @@ class Order extends CI_Controller {
                'charset'   => 'utf-8',
                'protocol'  => 'smtp',
                'smtp_host' => 'ssl://smtp.gmail.com',
-               'smtp_user' => 'demo@email.com',    // Ganti dengan email gmail kamu
-               'smtp_pass' => 'P@$$\/\/0RD',      // Password gmail kamu
+               'smtp_user' => 'demo@email.com',   
+               'smtp_pass' => 'P@$$\/\/0RD',      
                'smtp_port' => 465,
                'crlf'      => "rn",
                'newline'   => "rn"
@@ -109,10 +109,10 @@ class Order extends CI_Controller {
         $this->email->subject($subject);
         $this->email->message($message);
         if ($this->email->send()) {
-        	$this->session->set_flashdata('message', 'swal("Succeed", "E-Ticket sent!", "success");');
+        	$this->session->set_flashdata('message', 'swal("Succeed", "E-Bilet gönderildi!", "success");');
 			redirect('backend/order/vieworder/'.$id);
         } else {
-            $this->session->set_flashdata('message', 'swal("Failed", "E-Tickets Failed to Send Contact the IT Team", "error");');
+            $this->session->set_flashdata('message', 'swal("Failed", "E-Biletler Gönderilemedi BT Ekibiyle İletişime Geçin", "error");');
 			redirect('backend/order/vieworder/'.$id);
         }
 
@@ -120,6 +120,3 @@ class Order extends CI_Controller {
 
 }
 
-/* End of file Order.php */
-
-/* Location: ./application/controllers/backend/Order.php */

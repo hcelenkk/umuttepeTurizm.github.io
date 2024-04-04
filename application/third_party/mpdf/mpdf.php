@@ -1799,7 +1799,7 @@ function Close() {
 
 /*-- BACKGROUNDS --*/
 function _resizeBackgroundImage($imw, $imh, $cw, $ch, $resize=0, $repx, $repy, $pba=array(), $size=array()) {
-	// pba is background positioning area (from CSS background-origin) may not always be set [x,y,w,h]
+	// pba is background positioning area (from CSS background-origin) Mayis not always be set [x,y,w,h]
 	// size is from CSS3 background-size - takes precendence over old resize 
 	//	$w - absolute length or % or auto or cover | contain
 	//	$h - absolute length or % or auto or cover | contain
@@ -5803,7 +5803,7 @@ function finishFlowingBlock($endofblock=false, $next='') {
 		// mPDF 6
 		if ($blockdir == 'rtl' || $this->biDirectional)  {
 			$this->otl->_bidiReorder($chunkorder, $content, $cOTLdata, $blockdir);
-			// From this point on, $content and $cOTLdata may contain more elements (and re-ordered) compared to
+			// From this point on, $content and $cOTLdata Mayis contain more elements (and re-ordered) compared to
 			// $this->objectbuffer and $font ($chunkorder contains the mapping)
 		}
 /*-- END OTL --*/
@@ -7171,7 +7171,7 @@ if (!$table_draft) {
 		// mPDF 6
 		if ($blockdir == 'rtl' || $this->biDirectional)  {
 			$this->otl->_bidiReorder($chunkorder, $content, $cOTLdata, $blockdir);
-			// From this point on, $content and $cOTLdata may contain more elements (and re-ordered) compared to
+			// From this point on, $content and $cOTLdata Mayis contain more elements (and re-ordered) compared to
 			// $this->objectbuffer and $font ($chunkorder contains the mapping)
 		}
 
@@ -8809,7 +8809,7 @@ function _putannots() {	// mPDF 5.7.2
 				}
 				else {
 					$l=$this->links[$pl[4]];
-					// may not be set if #link points to non-existent target
+					// Mayis not be set if #link points to non-existent target
 					if (isset($this->pageDim[$l[0]]['h'])) { $htarg=$this->pageDim[$l[0]]['h']*_MPDFK; }
 					else { $htarg=$this->h*_MPDFK; } // doesn't really matter
 					$annot.=sprintf(' /Dest [%d 0 R /XYZ 0 %.3F null]>>',1+2*$l[0],$htarg-$l[1]*_MPDFK);
@@ -8979,7 +8979,7 @@ function Annotation($text, $x=0, $y=0, $icon='Note', $author='', $subject='', $o
 	}
 
 	if ($this->PDFA || $this->PDFX) {
-		if (($this->PDFA && !$this->PDFAauto) || ($this->PDFX && !$this->PDFXauto)) { $this->PDFAXwarnings[] = "Annotation markers cannot be semi-transparent in PDFA1-b or PDFX/1-a, so they may make underlying text unreadable. (Annotation markers moved to right margin)"; }
+		if (($this->PDFA && !$this->PDFAauto) || ($this->PDFX && !$this->PDFXauto)) { $this->PDFAXwarnings[] = "Annotation markers cannot be semi-transparent in PDFA1-b or PDFX/1-a, so they Mayis make underlying text unreadable. (Annotation markers moved to right margin)"; }
 		$x = ($this->w) - $this->rMargin*0.66;
 	}
 	if (!$this->annotMargin) { $y -= $this->FontSize / 2; }
@@ -10486,8 +10486,8 @@ function _getImage(&$file, $firsttime=true, $allowvector=true, $orig_srcpath=fal
 		}
 		if ($a[2] == 'DeviceCMYK' && (($this->PDFA && $this->restrictColorSpace!=3) || $this->restrictColorSpace==2)) {
 			// convert to RGB image
-			if (!function_exists("gd_info")) { $this->Error("JPG image may not use CMYK color space (".$file.")."); }
-			if ($this->PDFA && !$this->PDFAauto) { $this->PDFAXwarnings[] = "JPG image may not use CMYK color space - ".$file." - (Image converted to RGB. NB This will alter the colour profile of the image.)"; }
+			if (!function_exists("gd_info")) { $this->Error("JPG image Mayis not use CMYK color space (".$file.")."); }
+			if ($this->PDFA && !$this->PDFAauto) { $this->PDFAXwarnings[] = "JPG image Mayis not use CMYK color space - ".$file." - (Image converted to RGB. NB This will alter the colour profile of the image.)"; }
 			$im = @imagecreatefromstring($data);
 			if ($im) {
 				$tempfile = _MPDF_TEMP_PATH.'_tempImgPNG'.md5($file).RAND(1,10000).'.png';
@@ -10511,7 +10511,7 @@ function _getImage(&$file, $firsttime=true, $allowvector=true, $orig_srcpath=fal
 		else if ($a[2] == 'DeviceRGB' && ($this->PDFX || $this->restrictColorSpace==3)) {
 			// Convert to CMYK image stream - nominally returned as type='png'
 			$info = $this->_convImage($data, $a[2], 'DeviceCMYK', $a[0], $a[1], $ppUx, false);
-			if (($this->PDFA && !$this->PDFAauto) || ($this->PDFX && !$this->PDFXauto)) { $this->PDFAXwarnings[] = "JPG image may not use RGB color space - ".$file." - (Image converted to CMYK. NB This will alter the colour profile of the image.)"; }
+			if (($this->PDFA && !$this->PDFAauto) || ($this->PDFX && !$this->PDFXauto)) { $this->PDFAXwarnings[] = "JPG image Mayis not use RGB color space - ".$file." - (Image converted to CMYK. NB This will alter the colour profile of the image.)"; }
 		}
 		else if (($a[2] == 'DeviceRGB' || $a[2] == 'DeviceCMYK') && $this->restrictColorSpace==1) {
 			// Convert to Grayscale image stream - nominally returned as type='png'
@@ -10645,7 +10645,7 @@ function _getImage(&$file, $firsttime=true, $allowvector=true, $orig_srcpath=fal
 		if ($firsttime && ($colspace == 'DeviceRGB' || $colspace == 'Indexed') && ($this->PDFX || $this->restrictColorSpace==3)) {
 			// Convert to CMYK image stream - nominally returned as type='png'
 			$info = $this->_convImage($data, $colspace, 'DeviceCMYK', $w, $h, $ppUx, $pngalpha, $gamma_correction, $ct);	// mPDF 5.7.2 Gamma correction
-			if (($this->PDFA && !$this->PDFAauto) || ($this->PDFX && !$this->PDFXauto)) { $this->PDFAXwarnings[] = "PNG image may not use RGB color space - ".$file." - (Image converted to CMYK. NB This will alter the colour profile of the image.)"; }
+			if (($this->PDFA && !$this->PDFAauto) || ($this->PDFX && !$this->PDFXauto)) { $this->PDFAXwarnings[] = "PNG image Mayis not use RGB color space - ".$file." - (Image converted to CMYK. NB This will alter the colour profile of the image.)"; }
 		}
 		// $firsttime added mPDF 6 so when PNG Grayscale with alpha using resrtictcolorspace to CMYK
 		// the alpha channel is sent through as secondtime as Indexed and should not be converted to CMYK
@@ -12207,7 +12207,7 @@ function _setInlineBlockHeights(&$lineBox, &$stackHeight, &$content, &$font, $is
 	// First, set a "strut" using block font at index $lineBox[-1]
 	$ypos[-1] = $this->_setLineYpos($fontsize, $fontdesc, $CSSlineheight);
 
-	// for the block element - always taking the block EXTENDED progression including leading - which may be negative
+	// for the block element - always taking the block EXTENDED progression including leading - which Mayis be negative
 	if ($line_stacking_strategy == 'block-line-height') { 	
 		$topy = $ypos[-1]['exttop'];
 		$bottomy = $ypos[-1]['extbottom'];
@@ -12533,7 +12533,7 @@ function _get_file($path) {
 		$ap=realpath($lp);
 		$ap=str_replace("\\","/",$ap);
 		$docroot=substr($ap,0,strpos($ap,$lp));
-		// WriteHTML parses all paths to full URLs; may be local file name 
+		// WriteHTML parses all paths to full URLs; Mayis be local file name 
 		if ($tr['scheme'] && $tr['host'] && $_SERVER["DOCUMENT_ROOT"] ) { 
 			$localpath = $_SERVER["DOCUMENT_ROOT"] . $tr['path']; 
 		}
@@ -14359,13 +14359,13 @@ function WriteHTML($html,$sub=0,$init=true,$close=true) {
 		    if ($this->allow_html_optional_endtags && !$parseonly) {
 			if (isset($this->blk[$this->blklvl]['tag'])) {
 				$closed = false;
-				// li end tag may be omitted if there is no more content in the parent element
+				// li end tag Mayis be omitted if there is no more content in the parent element
 				if (!$closed && $this->blk[$this->blklvl]['tag']=='LI' && $endtag!='LI' && (in_array($endtag, $this->outerblocktags) || in_array($endtag, $this->innerblocktags))) { $this->CloseTag('LI',$a,$i); $closed = true; }
-				// dd end tag may be omitted if there is no more content in the parent element
+				// dd end tag Mayis be omitted if there is no more content in the parent element
 				if (!$closed && $this->blk[$this->blklvl]['tag']=='DD' && $endtag!='DD' && (in_array($endtag, $this->outerblocktags) || in_array($endtag, $this->innerblocktags))) { $this->CloseTag('DD',$a,$i); $closed = true; }
-				// p end tag may be omitted if there is no more content in the parent element and the parent element is not an A element [??????]
+				// p end tag Mayis be omitted if there is no more content in the parent element and the parent element is not an A element [??????]
 				if (!$closed && $this->blk[$this->blklvl]['tag']=='P' && $endtag!='P' && (in_array($endtag, $this->outerblocktags) || in_array($endtag, $this->innerblocktags))) { $this->CloseTag('P',$a,$i); $closed = true; }
-				// option end tag may be omitted if there is no more content in the parent element
+				// option end tag Mayis be omitted if there is no more content in the parent element
 				if (!$closed && $this->blk[$this->blklvl]['tag']=='OPTION' && $endtag!='OPTION' && (in_array($endtag, $this->outerblocktags) || in_array($endtag, $this->innerblocktags))) { $this->CloseTag('OPTION',$a,$i); $closed = true; }
 			}
 /*-- TABLES --*/
@@ -15657,16 +15657,16 @@ function OpenTag($tag,$attr,&$ahtml,&$ihtml) {	// mPDF 6
 	if ($this->allow_html_optional_endtags) {
 	   if (isset($this->blk[$this->blklvl]['tag'])) {
 		$closed = false;
-		// li end tag may be omitted if immediately followed by another li element
+		// li end tag Mayis be omitted if immediately followed by another li element
 		if (!$closed && $this->blk[$this->blklvl]['tag']=='LI' && $tag=='LI') { $this->CloseTag('LI',$ahtml,$ihtml);  $closed = true; }
-		// dt end tag may be omitted if immediately followed by another dt element or a dd element
+		// dt end tag Mayis be omitted if immediately followed by another dt element or a dd element
 		if (!$closed && $this->blk[$this->blklvl]['tag']=='DT' && ($tag=='DT' || $tag=='DD')) { $this->CloseTag('DT',$ahtml,$ihtml); $closed = true; }
-		// dd end tag may be omitted if immediately followed by another dd element or a dt element
+		// dd end tag Mayis be omitted if immediately followed by another dd element or a dt element
 		if (!$closed && $this->blk[$this->blklvl]['tag']=='DD' && ($tag=='DT' || $tag=='DD')) { $this->CloseTag('DD',$ahtml,$ihtml); $closed = true; }
-		// p end tag may be omitted if immediately followed by an address, article, aside, blockquote, div, dl, fieldset, form, 
+		// p end tag Mayis be omitted if immediately followed by an address, article, aside, blockquote, div, dl, fieldset, form, 
 		// h1, h2, h3, h4, h5, h6, hgroup, hr, main, nav, ol, p, pre, section, table, ul
 		if (!$closed && $this->blk[$this->blklvl]['tag']=='P' && ($tag == 'P' || $tag == 'DIV' || $tag == 'H1' || $tag == 'H2' || $tag == 'H3' || $tag == 'H4' || $tag == 'H5' || $tag == 'H6' || $tag == 'UL' || $tag == 'OL' || $tag == 'TABLE' || $tag=='PRE' || $tag=='FORM' || $tag=='ADDRESS' || $tag=='BLOCKQUOTE' || $tag=='CENTER' || $tag=='DL' || $tag == 'HR' || $tag=='ARTICLE' || $tag=='ASIDE' || $tag=='FIELDSET' || $tag=='HGROUP' || $tag=='MAIN' || $tag=='NAV' || $tag=='SECTION')) { $this->CloseTag('P',$ahtml,$ihtml); $closed = true; }
-		// option end tag may be omitted if immediately followed by another option element (or if it is immediately followed by an optgroup element)
+		// option end tag Mayis be omitted if immediately followed by another option element (or if it is immediately followed by an optgroup element)
 		if (!$closed && $this->blk[$this->blklvl]['tag']=='OPTION' && $tag=='OPTION') { $this->CloseTag('OPTION',$ahtml,$ihtml); $closed = true; }
 		// Table elements - see also WriteHTML()
 		if (!$closed && ($tag == 'TD' || $tag == 'TH') && $this->lastoptionaltag == 'TD') { $this->CloseTag($this->lastoptionaltag,$ahtml,$ihtml); $closed = true; }	// *TABLES*
@@ -15942,7 +15942,7 @@ function OpenTag($tag,$attr,&$ahtml,&$ihtml) {	// mPDF 6
 	}
 	if ($tag == 'TOCPAGEBREAK') { $pagebreaktype = 'cloneall'; }
 	else if ($this->ColActive) { $pagebreaktype = 'cloneall'; }
-	// Any change in headers/footers (may need to _getHtmlHeight), or page size/orientation, @page selector, or margins - force cloneall
+	// Any change in headers/footers (Mayis need to _getHtmlHeight), or page size/orientation, @page selector, or margins - force cloneall
 	else if ($mgr!=='' || $mgl!=='' || $mgt!=='' || $mgb!=='' || $mgh!=='' || $mgf!=='' || 
 		$ohname!=='' || $ehname!=='' || $ofname!=='' || $efname!=='' || 
 		$ohvalue || $ehvalue || $ofvalue || $efvalue ||
@@ -20190,7 +20190,7 @@ function CloseTag($tag,&$ahtml,&$ihtml) {	// mPDF 6
 	$this->tdbegin = false;
 	// Added for correct calculation of cell column width - otherwise misses the last line if not end </p> etc.
 	if (!isset($this->cell[$this->row][$this->col]['maxs'])) {
-		if (!is_array($this->cell[$this->row][$this->col])) { $this->Error("You may have an error in your HTML code e.g. &lt;/td&gt;&lt;/td&gt;"); }
+		if (!is_array($this->cell[$this->row][$this->col])) { $this->Error("You Mayis have an error in your HTML code e.g. &lt;/td&gt;&lt;/td&gt;"); }
 		$this->cell[$this->row][$this->col]['maxs'] = $this->cell[$this->row][$this->col]['s']; 
 	}
 	elseif($this->cell[$this->row][$this->col]['maxs'] < $this->cell[$this->row][$this->col]['s']) {
@@ -20984,7 +20984,7 @@ function CloseTag($tag,&$ahtml,&$ihtml) {	// mPDF 6
 // This function determines the shrink factor when resizing tables
 // val is the table_height / page_height_available
 // returns a scaling factor used as $shrin_k to resize the table
-// Overcompensating will be quicker but may unnecessarily shrink table too much
+// Overcompensating will be quicker but Mayis unnecessarily shrink table too much
 // Undercompensating means it will reiterate more times (taking more processing time)
 function tbsqrt($val, $iteration=3) {
 	$k = 4;	// Alters number of iterations until it returns $val itself - Must be > 2
@@ -24667,7 +24667,7 @@ function _tableColumnWidth(&$table,$firstpass=false){
 	$checkminwidth += $tblbw ;
 	$checkmaxwidth += $tblbw ;
 
-	// Table['miw'] set by percent in first pass may be larger than sum of column miw
+	// Table['miw'] set by percent in first pass Mayis be larger than sum of column miw
 	if ((isset($table['miw']) && $checkminwidth > $table['miw']) || !isset($table['miw'])) {  $table['miw'] = $checkminwidth; }
 	if ((isset($table['maw']) && $checkmaxwidth > $table['maw']) || !isset($table['maw'])) { $table['maw'] = $checkmaxwidth; }
 	$table['tl'] = $totallength ;
@@ -30468,7 +30468,7 @@ function magic_reverse_dir(&$chunk, $dir, &$chunkOTLdata) {
 		if (isset($this->CurrentFont['useOTL']) && ($this->CurrentFont['useOTL'] & 0x80) ) { $useGPOS = true; }
 		else { $useGPOS = false; }
 
-		// NB Returned $chunk may be a shorter string (with adjusted $cOTLdata) by removal of LRE, RLE etc embedding codes.
+		// NB Returned $chunk Mayis be a shorter string (with adjusted $cOTLdata) by removal of LRE, RLE etc embedding codes.
 		list($chunk ,$rtl_content) = $this->otl->_bidiSort($unicode, $chunk, $dir, $chunkOTLdata, $useGPOS);
 
 		return $rtl_content;
@@ -32223,7 +32223,7 @@ function dec2hebrew($in, $reverse = false) {
 
 		// Pop the first additive tuple from the glyph list. This is the current tuple.
 		$ct = $additive_nums[$t];
-		// Append the current tuple's counter glyph to S x floor( I / current tuple's weight ) times (this may be 0). 
+		// Append the current tuple's counter glyph to S x floor( I / current tuple's weight ) times (this Mayis be 0). 
 		$n = floor($i / $ct);
 		for($j=0;$j<$n;$j++) { 
 			if (is_array($additive_glyphs[$t])) {

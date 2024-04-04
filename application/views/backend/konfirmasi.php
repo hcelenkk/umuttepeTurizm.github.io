@@ -19,7 +19,7 @@
       <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-        <h1 class="h5 text-gray-800">Payments List</h1>
+        <h1 class="h5 text-gray-800">Ödeme Listesi</h1>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -28,11 +28,11 @@
                 <tr>
                   <th>#</th>
                   <th>Code</th>
-                  <th>Booking Code</th>
-                  <th>Sender </th>
-                  <th>Bank </th>
-                  <th>Account No.</th>
-                  <th>Price</th>
+                  <th>Rezervasyon Kodu</th>
+                  <th>Gönderen </th>
+                  <th>Banka </th>
+                  <th>Hesap No.</th>
+                  <th>Fiyat</th>
                   <th>TF proof</th>
                 </tr>
               </thead>
@@ -46,7 +46,7 @@
                     <td><?= $row['dogrulamaBankaAdi']; ?></td>
                     <td><?= $row['dogrulamaHesapNo']; ?></td>
                     <td>$<?= $row['dogrulamaToplam']; ?></td>
-                    <td><a href="<?= base_url('backend/konfirmasi/viewkonfirmasi/'.$row['rezervasyonKodu']) ?>" class="btn btn btn-info">View</a></td>
+                    <td><a href="<?= base_url('backend/konfirmasi/viewkonfirmasi/'.$row['rezervasyonKodu']) ?>" class="btn btn btn-info">İncele</a></td>
                   </tr>
                 <?php } ?>
             </tbody>
@@ -54,23 +54,22 @@
         </div>
       </div>
     </div>
-    <!-- /.container-fluid -->
+    
   </div>
-  <!-- /.container-fluid -->
+  
 </div>
-<!-- End of Main Content -->
-<!-- Footer -->
+
 <?php $this->load->view('backend/include/base_footer'); ?>
-<!-- End of Footer -->
+
 </div>
-<!-- End of Content Wrapper -->
+
 </div>
-<!-- End of Page Wrapper -->
-<!-- Scroll to Top Button-->
+
+
 <a class="scroll-to-top rounded" href="#page-top">
 <i class="fas fa-angle-up"></i>
 </a>
-<!-- js -->
+
 <?php $this->load->view('backend/include/base_js'); ?>
 </body>
 </html>

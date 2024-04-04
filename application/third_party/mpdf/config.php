@@ -47,7 +47,7 @@ $this->useAdobeCJK = false;		// Uses Adobe CJK fonts for CJK languages
 			// and vice versa i.e. only dictates behaviour when specified by lang="" incl. AutoFont()
 
 // When embedding full TTF font files, remakes the font file using only core tables
-// May improve function with some PostScript printers (GhostScript/GSView)
+// Mayis improve function with some PostScript printers (GhostScript/GSView)
 // Does not work with TTC font collections
 // Slightly smaller file; increased processing time
 $this->repackageTTF = false; 
@@ -84,7 +84,7 @@ $this->progbar_altHTML = '';			// Should include <html> and <body> but NOT end t
 $this->dpi = 96;					// To interpret "px" pixel values in HTML/CSS (see img_dpi below)
 
 // Automatically correct for tags where HTML specifies optional end tags e.g. P,LI,DD,TD
-// If you are confident input html is valid XHTML, turning this off may make it more reliable(?)
+// If you are confident input html is valid XHTML, turning this off Mayis make it more reliable(?)
 $this->allow_html_optional_endtags = true;
 
 $this->ignore_invalid_utf8 = false;
@@ -94,7 +94,7 @@ $this->useGraphs = false;
 
 // When writing a block element with position:fixed and overflow:auto, mPDF scales it down to fit in the space
 // by repeatedly rewriting it and making adjustments. These values give the adjustments used, depending how far out
-// the previous guess was. The lower the number, the quicker it will finish, but the less accurate the fit may be.
+// the previous guess was. The lower the number, the quicker it will finish, but the less accurate the fit Mayis be.
 // FPR1 is for coarse adjustments, and FPR4 for fine adjustments when it is getting closer.
 $this->incrementFPR1 = 10;	// i.e. will alter by 1/[10]th of width and try again until within closer limits
 $this->incrementFPR2 = 20;

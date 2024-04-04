@@ -161,7 +161,7 @@ class CI_Zip {
 	 */
 	protected function _get_mod_time($dir)
 	{
-		// filemtime() may return false, but raises an error for non-existing files
+		// filemtime() Mayis return false, but raises an error for non-existing files
 		$date = file_exists($dir) ? getdate(filemtime($dir)) : getdate($this->now);
 
 		return array(

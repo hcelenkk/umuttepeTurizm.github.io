@@ -82,13 +82,13 @@
         </div>
       </div>
     </div>
-    <!-- End of Main Content -->
+    
     <!-- The Modal -->
     
-    <!-- Footer -->
+    
     <?php $this->load->view('backend/include/base_footer'); ?>
-    <!-- End of Footer -->
-    <!-- js -->
+    
+    
         <?php $this->load->view('backend/include/base_js'); ?>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/ripples.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/material.min.js"></script>

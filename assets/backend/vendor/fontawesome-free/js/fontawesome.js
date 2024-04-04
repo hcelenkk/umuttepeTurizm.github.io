@@ -1733,9 +1733,9 @@
   }
 
   function resolveIcons(next) {
-    return function (maybeIconDefinition) {
+    return function (MayisbeIconDefinition) {
       var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-      var iconDefinition = (maybeIconDefinition || {}).icon ? maybeIconDefinition : findIconDefinition(maybeIconDefinition || {});
+      var iconDefinition = (MayisbeIconDefinition || {}).icon ? MayisbeIconDefinition : findIconDefinition(MayisbeIconDefinition || {});
       var mask = params.mask;
 
       if (mask) {

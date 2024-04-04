@@ -1,5 +1,5 @@
 		   GNU LESSER GENERAL PUBLIC LICENSE
-                       Version 3, 29 June 2007
+                       Version 3, 29 Haziran 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
  Everyone is permitted to copy and distribute verbatim copies
@@ -41,7 +41,7 @@ Application, but excluding the System Libraries of the Combined Work.
 
   1. Exception to Section 3 of the GNU GPL.
 
-  You may convey a covered work under sections 3 and 4 of this License
+  You Mayis convey a covered work under sections 3 and 4 of this License
 without being bound by section 3 of the GNU GPL.
 
   2. Conveying Modified Versions.
@@ -49,7 +49,7 @@ without being bound by section 3 of the GNU GPL.
   If you modify a copy of the Library, and, in your modifications, a
 facility refers to a function or data to be supplied by an Application
 that uses the facility (other than as an argument passed when the
-facility is invoked), then you may convey a copy of the modified
+facility is invoked), then you Mayis convey a copy of the modified
 version:
 
    a) under this License, provided that you make a good faith effort to
@@ -62,8 +62,8 @@ version:
 
   3. Object Code Incorporating Material from Library Header Files.
 
-  The object code form of an Application may incorporate material from
-a header file that is part of the Library.  You may convey such object
+  The object code form of an Application Mayis incorporate material from
+a header file that is part of the Library.  You Mayis convey such object
 code under terms of your choice, provided that, if the incorporated
 material is not limited to numerical parameters, data structure
 layouts and accessors, or small macros, inline functions and templates
@@ -78,7 +78,7 @@ layouts and accessors, or small macros, inline functions and templates
 
   4. Combined Works.
 
-  You may convey a Combined Work under terms of your choice that,
+  You Mayis convey a Combined Work under terms of your choice that,
 taken together, effectively do not restrict modification of the
 portions of the Library contained in the Combined Work and reverse
 engineering for debugging such modifications, if you also do each of
@@ -127,7 +127,7 @@ the following:
 
   5. Combined Libraries.
 
-  You may place library facilities that are a work based on the
+  You Mayis place library facilities that are a work based on the
 Library side by side in a single library together with other library
 facilities that are not Applications and are not covered by this
 License, and convey such a combined library under terms of your
@@ -143,9 +143,9 @@ choice, if you do both of the following:
 
   6. Revised Versions of the GNU Lesser General Public License.
 
-  The Free Software Foundation may publish revised and/or new versions
+  The Free Software Foundation Mayis publish revised and/or new versions
 of the GNU Lesser General Public License from time to time. Such new
-versions will be similar in spirit to the present version, but may
+versions will be similar in spirit to the present version, but Mayis
 differ in detail to address new problems or concerns.
 
   Each version is given a distinguishing version number. If the
@@ -155,7 +155,7 @@ applies to it, you have the option of following the terms and
 conditions either of that published version or of any later version
 published by the Free Software Foundation. If the Library as you
 received it does not specify a version number of the GNU Lesser
-General Public License, you may choose any version of the GNU Lesser
+General Public License, you Mayis choose any version of the GNU Lesser
 General Public License ever published by the Free Software Foundation.
 
   If the Library as you received it specifies that a proxy can decide

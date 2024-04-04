@@ -96,7 +96,7 @@
 				
 				<!-- start footer Area -->
 				<?php $this->load->view('frontend/include/base_footer'); ?>
-				<!-- js -->
+				
 				<?php $this->load->view('frontend/include/base_js'); ?>
 			</body>
 		</html>

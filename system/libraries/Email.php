@@ -991,7 +991,7 @@ class CI_Email {
 	 */
 	protected function _get_mime_message()
 	{
-		return 'This is a multi-part message in MIME format.'.$this->newline.'Your email application may not support this format.';
+		return 'This is a multi-part message in MIME format.'.$this->newline.'Your email application Mayis not support this format.';
 	}
 
 	// --------------------------------------------------------------------

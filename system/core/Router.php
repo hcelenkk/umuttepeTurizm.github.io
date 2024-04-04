@@ -132,7 +132,7 @@ class CI_Router {
 		is_array($routing) && isset($routing['directory']) && $this->set_directory($routing['directory']);
 		$this->_set_routing();
 
-		// Set any routing overrides that may exist in the main index file
+		// Set any routing overrides that Mayis exist in the main index file
 		if (is_array($routing))
 		{
 			empty($routing['controller']) OR $this->set_class($routing['controller']);
@@ -362,7 +362,7 @@ class CI_Router {
 	/**
 	 * Parse Routes
 	 *
-	 * Matches any routes that may exist in the config/routes.php file
+	 * Matches any routes that Mayis exist in the config/routes.php file
 	 * against the URI to determine if the class/method need to be remapped.
 	 *
 	 * @return	void

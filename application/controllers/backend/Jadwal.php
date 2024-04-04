@@ -41,7 +41,7 @@ class Jadwal extends CI_Controller {
 			$tujuan = $this->db->query("SELECT * FROM tbl_sehir
                WHERE sehirKodu ='".$this->input->post('tujuan')."'")->row_array();
 			if ($asal == $tujuan['sehirKodu']) {
-				$this->session->set_flashdata('message', 'swal("Succeed", "Schedule Goals Cant Be the Same", "error");');
+				$this->session->set_flashdata('message', 'swal("Succeed", "Program hedefleri aynı olamaz", "error");');
 			redirect('backend/jadwal');
 			}else{
 			$kode = $this->getkod_model->get_kodjad();
@@ -55,9 +55,9 @@ class Jadwal extends CI_Controller {
 					'varisSaati' => $this->input->post('tiba'),
 					'fiyatTarifesi' =>  $this->input->post('harga'),
 					 );
-			// die(print_r($simpan));
+
 			$this->db->insert('tbl_saat', $simpan);
-			$this->session->set_flashdata('message', 'swal("Succeed", "New schedule has been added", "success");');
+			$this->session->set_flashdata('message', 'swal("Succeed", "Yeni program eklendi", "success");');
 			redirect('backend/jadwal');
 			}
 			
@@ -71,15 +71,11 @@ class Jadwal extends CI_Controller {
 	 		$data['asal'] = $this->db->query("SELECT * FROM tbl_sehir WHERE sehirKodu = '".$sqlcek['terminalKodu']."'")->row_array();
 	 		$data['jadwal'] = $sqlcek;
 			$data['title'] = "View Schedule";
-			// die(print_r($data));
+
 			$this->load->view('backend/view_jadwal',$data);
 	 	}else{
-	 		$this->session->set_flashdata('message', 'swal("Failed", "Something Went Wrong. Please Try Again", "error");');
+	 		$this->session->set_flashdata('message', 'swal("Failed", "Bir şeyler yanlış gitti. Lütfen daha sonra tekrar deneyin.", "error");');
 			redirect('backend/jadwal');
 	 	}
 	}	
 }
-
-/* End of file Jadwal.php */
-
-/* Location: ./application/controllers/backend/Jadwal.php */

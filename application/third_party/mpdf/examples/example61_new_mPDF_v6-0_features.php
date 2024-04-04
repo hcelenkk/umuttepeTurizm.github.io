@@ -486,7 +486,7 @@ TAI THAM
 <pagebreak odd-footer-name="myHTMLbengali" odd-footer-value="1" even-footer-name="myHTMLbengali" even-footer-value="1" pagenumstyle="bengali" />
 
 <h3>Dictionary Line breaking</h3>
-<p>Lao, Thai and Khmer text does not have space between words. By default, mPDF 6 uses word dictionaries to determine appropriate opportunites for line-breaks. Users may turn this function off using the configurable variable <span class="code">useDictionaryLBR</span>.</p>
+<p>Lao, Thai and Khmer text does not have space between words. By default, mPDF 6 uses word dictionaries to determine appropriate opportunites for line-breaks. Users Mayis turn this function off using the configurable variable <span class="code">useDictionaryLBR</span>.</p>
 
 <p>Alternatively users can insert the character U+200B (zero-width space) in the text to mark line-breaking opportunities manually.</p>
 
@@ -749,7 +749,7 @@ First Strong Isolate (FSI)
 
 
 <h4>First strong isolate (FSI)</h4>
-<p>FSI is useful when including text within a paragraph where the directionality of the text is unknown. For example, if you are printing out a catalogue from a database of book titles and the number of readers, when some book titles are in right-to-left script, you may use this template:</p>
+<p>FSI is useful when including text within a paragraph where the directionality of the text is unknown. For example, if you are printing out a catalogue from a database of book titles and the number of readers, when some book titles are in right-to-left script, you Mayis use this template:</p>
 
 <p class="code">
 &lt;li&gt;Title: {TITLE} - {READERS} readers&lt;/li&gt;
@@ -785,10 +785,10 @@ First Strong Isolate (FSI)
 
 <p>TrueType fonts allow for 2 possible ways of including kerning data:</p>
 <ul>
-<li>OTL GPOS table may contain kerning information</li>
+<li>OTL GPOS table Mayis contain kerning information</li>
 <li>A separate kern table</li>
 </ul>
-<p>Most fonts contain both or none, but they may exist independently.</p>
+<p>Most fonts contain both or none, but they Mayis exist independently.</p>
 
 <p>If kerning is set to be active (by either of the CSS methods):</p>
 <ul>
@@ -867,7 +867,7 @@ First Strong Isolate (FSI)
 
 <p>Setting useOTL to 0 (or omitting it) will disable all OTL features. Setting useOTL to 255 or 0xFF will enable OTL for all scripts. Setting useOTL to 0x82 will enable OTL features for Cyrillic and complex scripts.</p>
 
-<p>In a font like Free Serif, it may be useful to enable OTL features for complex scripts, but disable OTL for Latin scripts (to save processing time). However, see above - this may disable kerning in Latin scripts in certain circumstances.</p>
+<p>In a font like Free Serif, it Mayis be useful to enable OTL features for complex scripts, but disable OTL for Latin scripts (to save processing time). However, see above - this Mayis disable kerning in Latin scripts in certain circumstances.</p>
 
 
 <h4>useKashida</h4>
@@ -891,7 +891,7 @@ First Strong Isolate (FSI)
 
 <h4>Setting OTL use at runtime</h4>
 <p>mPDF caches some font information in the /ttfontdata/ folder to improve performance. This is regenerated if you change the value of useOTL for a font.</p>
-<p>There may be circumstances when you wish to use OTL features with different scripts depending on the document e.g. for everyday use you may want to disable OTL for FreeSerif to save processing time, but on occasions use OTL for Indic and/or Arabic scripts. The recommended way to do this is to create 2 instances of the font e.g. in config_fonts.php:</p>
+<p>There Mayis be circumstances when you wish to use OTL features with different scripts depending on the document e.g. for everyday use you Mayis want to disable OTL for FreeSerif to save processing time, but on occasions use OTL for Indic and/or Arabic scripts. The recommended way to do this is to create 2 instances of the font e.g. in config_fonts.php:</p>
 <p class="code">
 	"freeserif" =&gt; array(<br />
 		\'R\' =&gt; "FreeSerif.ttf",<br />
@@ -1009,7 +1009,7 @@ Page break type determined by value of configurable variable: $this-&gt;defaultP
 
 
 <h4>Notes on page breaking</h4>
-<p>"box-decoration-break: slice | clone" was proposed for CSS3 in <a href="http://www.w3.org/TR/2012/CR-css3-background-20120417/#the-box-decoration-break">http://www.w3.org/TR/2012/CR-css3-background-20120417/#the-box-decoration-break</a> but it appears that it may be withdrawn. Default is "slice"; it is not inherited.</p>
+<p>"box-decoration-break: slice | clone" was proposed for CSS3 in <a href="http://www.w3.org/TR/2012/CR-css3-background-20120417/#the-box-decoration-break">http://www.w3.org/TR/2012/CR-css3-background-20120417/#the-box-decoration-break</a> but it appears that it Mayis be withdrawn. Default is "slice"; it is not inherited.</p>
 <p>"page-break-before" is not supported on &lt;table&gt;.</p>
 <p>"page-break-before|after" is ignored if set on block elements inside a table.</p>
 <p>mPDF functions e.g. AddPage() are not affected by the changes in mPDF 6.</p>
@@ -1180,7 +1180,7 @@ although note that MS WordPad and Windows FireFox browser use the big line-heigh
 <ul>
 <li>\'winTypo\' uses sTypoAscender etc from the OS/2 table and is the one officially recommended - BUT</li>
 <li>\'win\' use usWinAscent etc from OS/2 and in practice seems to be used most commonly in Windows environment; this is the default in mPDF;</li>
-<li>\'mac\' uses Ascender etc from hhea table, and may be used to give results consistent with a Mac/OSX environment.</li>
+<li>\'mac\' uses Ascender etc from hhea table, and Mayis be used to give results consistent with a Mac/OSX environment.</li>
 </ul>
 
 <p>Finally, you can override values for Ascent, Descent and Leading for any specific font, by setting values in <span classs="code">config_font.php</span> e.g.
@@ -1516,7 +1516,7 @@ Hallo world (image-orientation)
 <h3>Headers and Footers</h3>
 <p>Headers and Footers are all now written internally as HTMLheaders/footers. The use of non-HTML headers and footers is depracated, but remains supported. Non-HTML headers and footers are converted in mPDF to HTML equivalents.</p>
 
-<p>Layout: This may mean that there will be a change in the resulting PDF. The main change is that an HTML table is created with three cells for left, right and middle; if you had a very long Left header item, it will not overwrite the center item, but it may wrap center onto 2 lines.</p>
+<p>Layout: This Mayis mean that there will be a change in the resulting PDF. The main change is that an HTML table is created with three cells for left, right and middle; if you had a very long Left header item, it will not overwrite the center item, but it Mayis wrap center onto 2 lines.</p>
 
 <p>Naming: Default non-HTML headers will not clash with HTML headers, but named non-HTML headers WILL clash with (and overwrite) HTML headers of the same (equivalent) name e.g. html_MyFooter == MyFooter (non-HTML).</p>
 
@@ -1577,7 +1577,7 @@ they set the pagenumbering and pagenumbering style for the ToC, and whether to s
 <h3>Other changes from mPDF 5</h3>
 
 <h4>Setting up mPDF 6</h4>
-<p>mPDF 6 has changed significantly from earlier version and it is recommended that a fresh install is used. You may wish to copy your previous config_* files and use them to update the new config files.</p>
+<p>mPDF 6 has changed significantly from earlier version and it is recommended that a fresh install is used. You Mayis wish to copy your previous config_* files and use them to update the new config files.</p>
 
 <p><b>config_fonts.php</b> - values of "indic" and "unAglyphs" from previous versions are now redundant.</p>
 
@@ -1585,9 +1585,9 @@ they set the pagenumbering and pagenumbering style for the ToC, and whether to s
 
 <p><b>Included fonts</b> - the Indic fonts e.g. ind_bn_001.ttf are no longer required (nor do they work properly with mPDF 6).</p>
 
-<p><b>useLang</b> - this configurable variable, which used to be true by default, is now redundant. You may need to set: $mpdf-&gt;autoLangToFont = true; for the same results.</p>
+<p><b>useLang</b> - this configurable variable, which used to be true by default, is now redundant. You Mayis need to set: $mpdf-&gt;autoLangToFont = true; for the same results.</p>
 
-<p><b>SetAutoFont()</b> - is now redundant. You may need to set: $mpdf-&gt;autoScriptToLang = true; for the same results.</p>
+<p><b>SetAutoFont()</b> - is now redundant. You Mayis need to set: $mpdf-&gt;autoScriptToLang = true; for the same results.</p>
 
 <p><b>Indexes</b> - have been largely redefined. See the section above.</p>
 
@@ -1626,7 +1626,7 @@ they set the pagenumbering and pagenumbering style for the ToC, and whether to s
 <p>WriteText() WriteCell() Watermark() AutoSizeText() and ShadedBox() DO support complex scripts and right-to-left text (RTL).</p>
 <p>Write() does NOT support complex scripts or RTL (NB this is a change - Write() used to support RTL).</p>
 <p>CircularText() does NOT support complex scripts or RTL.</p>
-<p>MultiCell() DOES support complex scripts and RTL, but complex-script line-breaking MAY NOT be accurate.</p>
+<p>MultiCell() DOES support complex scripts and RTL, but complex-script line-breaking Mayis NOT be accurate.</p>
 MultiCell() does not support kerning and justification. NB This includes &lt;textarea&gt; in forms which uses MultiCell() internally.</p>
 <p>&lt;select&gt; form objects also do NOT support kerning.</p>
 
@@ -1677,7 +1677,7 @@ Added support for opacity="0.6" (as attribute) in SVG - previously only supporte
 
 <p>The way mPDF handles optional end tags has been updated to be consistent with the <a href="http://www.w3.org/TR/html5/syntax.html#optional-tags">HTML5 specification</a>	- previously not well defined for HTML4.</p>
 
-<p>Changes to the way lists are handled means that text-align:justify may be inherited by lists from surrounding block elements (which did not happen previously). See LISTS above for more information.</p>
+<p>Changes to the way lists are handled means that text-align:justify Mayis be inherited by lists from surrounding block elements (which did not happen previously). See LISTS above for more information.</p>
 
 
 
@@ -2003,7 +2003,7 @@ No licence information available</td>
 <td>Eeyek Unicode</td>
 <td>http://tabish.freeshell.org/eeyek/download.html</td>
 <td>Freeware</td>
-<td>Meetei Mayek</td>
+<td>Meetei Mayisek</td>
 </tr>
 <tr>
 <td>Lannaalif</td>

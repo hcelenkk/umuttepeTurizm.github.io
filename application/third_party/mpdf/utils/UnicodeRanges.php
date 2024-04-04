@@ -142,7 +142,7 @@ array('starthex'=> 'AA00', 'endhex'=>'AA5F', 'startdec'=> 43520, 'enddec'=> 4361
 array('starthex'=> 'AA60', 'endhex'=>'AA7B', 'startdec'=> 43616, 'enddec'=> 43647, 'range'=>'Myanmar', 'special'=>true),
 array('starthex'=> 'AA80', 'endhex'=>'AADF', 'startdec'=> 43648, 'enddec'=> 43743, 'range'=>'Tai Viet'),
 
-array('starthex'=> 'ABC0', 'endhex'=>'ABF9', 'startdec'=> 43968, 'enddec'=> 44025, 'range'=>'Meetei Mayek'),
+array('starthex'=> 'ABC0', 'endhex'=>'ABF9', 'startdec'=> 43968, 'enddec'=> 44025, 'range'=>'Meetei Mayisek'),
 
 array('starthex'=> 'AC00', 'endhex'=>'D7FF', 'startdec'=> 44032, 'enddec'=>55295 , 'range'=>'Hangul Syllables', 'cjk'=>true),
 

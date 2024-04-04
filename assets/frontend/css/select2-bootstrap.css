@@ -572,7 +572,7 @@
  *
  * If a Select2 widget parent has one of Bootstrap's validation state modifier
  * classes, adjust Select2's border colors and focus states accordingly.
- * You may apply said classes to the Select2 dropdown (body > .select2-container)
+ * You Mayis apply said classes to the Select2 dropdown (body > .select2-container)
  * via JavaScript match Bootstraps' to make its styles match.
  *
  * @see http://getbootstrap.com/css/#forms-control-validation
@@ -677,7 +677,7 @@
   /**
    * Adjust alignment of Bootstrap buttons in Bootstrap Input Groups to address
    * Multi Select2's height which - depending on how many elements have been selected -
-   * may grow taller than its initial size.
+   * Mayis grow taller than its initial size.
    *
    * @see http://getbootstrap.com/components/#input-groups
    */

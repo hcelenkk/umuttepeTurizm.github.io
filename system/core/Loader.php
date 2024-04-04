@@ -1083,7 +1083,7 @@ class CI_Loader {
 			return $this->_ci_init_library($class, '', $params, $object_name);
 		}
 
-		// One last attempt. Maybe the library is in a subdirectory, but it wasn't specified?
+		// One last attempt. Mayisbe the library is in a subdirectory, but it wasn't specified?
 		if ($subdir === '')
 		{
 			return $this->_ci_load_library($class.'/'.$class, $params, $object_name);

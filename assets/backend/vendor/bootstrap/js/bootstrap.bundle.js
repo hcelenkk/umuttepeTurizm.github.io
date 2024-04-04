@@ -2016,7 +2016,7 @@
       offsets.left -= borderLeftWidth - marginLeft;
       offsets.right -= borderLeftWidth - marginLeft;
 
-      // Attach marginTop and marginLeft because in some circumstances we may need them
+      // Attach marginTop and marginLeft because in some circumstances we Mayis need them
       offsets.marginTop = marginTop;
       offsets.marginLeft = marginLeft;
     }
@@ -2786,7 +2786,7 @@
 
     // now, let's make a step back and look at this code closely (wtf?)
     // If the content of the popper grows once it's been positioned, it
-    // may happen that the popper gets misplaced because of the new content
+    // Mayis happen that the popper gets misplaced because of the new content
     // overflowing its reference element
     // To avoid this problem, we provide two options (x and y), which allow
     // the consumer to define the offset origin.
@@ -3079,7 +3079,7 @@
       var popperOffsets = data.offsets.popper;
       var refOffsets = data.offsets.reference;
 
-      // using floor because the reference offsets may contain decimals we are not going to consider here
+      // using floor because the reference offsets Mayis contain decimals we are not going to consider here
       var floor = Math.floor;
       var overlapsRef = placement === 'left' && floor(popperOffsets.right) > floor(refOffsets.left) || placement === 'right' && floor(popperOffsets.left) < floor(refOffsets.right) || placement === 'top' && floor(popperOffsets.bottom) > floor(refOffsets.top) || placement === 'bottom' && floor(popperOffsets.top) < floor(refOffsets.bottom);
 
@@ -3109,7 +3109,7 @@
         data.placement = placement + (variation ? '-' + variation : '');
 
         // this object contains `position`, we want to preserve it along with
-        // any additional property we may add in the future
+        // any additional property we Mayis add in the future
         data.offsets.popper = _extends({}, data.offsets.popper, getPopperOffsets(data.instance.popper, data.offsets.reference, data.placement));
 
         data = runModifiers(data.instance.modifiers, data, 'flip');
@@ -3559,7 +3559,7 @@
      * '10 - 5vh + 3%'
      * '-10px + 5vh, 5px - 6%'
      * ```
-     * > **NB**: If you desire to apply offsets to your poppers in a way that may make them overlap
+     * > **NB**: If you desire to apply offsets to your poppers in a way that Mayis make them overlap
      * > with their reference element, unfortunately, you will have to disable the `flip` modifier.
      * > You can read more on this at this [issue](https://github.com/FezVrasta/popper.js/issues/373).
      *

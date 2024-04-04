@@ -227,7 +227,7 @@ public static function set_syllables(&$o, $s, &$broken_syllables) {
 
 		// BROKEN_CLUSTER syllable
 		else if (preg_match('/^(RaH)?s?(H|[a]*[n]?[l]?((m[k]?|k)[a]?)?[e]*[v]*[b]*[A]*(N[a]?)?(t[k]?[a]*[v]*[A]*(N[a]?)?)*(p[A]*(N[a]?)?)*S*[J|Z]?)/', substr($s,$ptr), $ma)) {
-			if (strlen($ma[0])) {	// May match blank
+			if (strlen($ma[0])) {	// Mayis match blank
 				$syllable_length = strlen($ma[0]);
 				$syllable_type = self::BROKEN_CLUSTER ;
 				$broken_syllables = true;
@@ -337,7 +337,7 @@ public static function reordering_syllable (&$info, $GSUBdata, $start, $end) {
 		$i++;
 	}
 	$pos = self::POS_AFTER_MAIN;
-	/* The following loop may be ugly, but it implements all of
+	/* The following loop Mayis be ugly, but it implements all of
 	* Myanmar reordering! */
 	for (; $i < $end; $i++) {
 		if ($info[$i]['myanmar_category'] == self::OT_MR) /* Pre-base reordering */

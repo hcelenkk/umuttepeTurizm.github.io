@@ -382,7 +382,7 @@ test('Today Highlight: today\'s date is not highlighted by default', patch_date(
 
     input.focus();
     ok(picker.find('.datepicker-days').is(':visible'), 'Days view visible');
-    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'March 2012', 'Title is "March 2012"');
+    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'Mart 2012', 'Title is "Mart 2012"');
 
     target = picker.find('.datepicker-days tbody td:contains(15)');
     ok(!target.hasClass('today'), 'Today is not marked with "today" class');
@@ -407,7 +407,7 @@ test('Today Highlight: today\'s date is highlighted when not active', patch_date
 
     input.focus();
     ok(picker.find('.datepicker-days').is(':visible'), 'Days view visible');
-    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'March 2012', 'Title is "March 2012"');
+    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'Mart 2012', 'Title is "Mart 2012"');
 
     target = picker.find('.datepicker-days tbody td:contains(15)');
     ok(target.hasClass('today'), 'Today is marked with "today" class');
@@ -820,9 +820,9 @@ test('BeforeShowMonth', function () {
                     classes: 'active'
                 };
             case 2:
-                return "testMarch";
+                return "testMart";
             case 4:
-                return {enabled: false, classes: 'testMay'};
+                return {enabled: false, classes: 'testMayis'};
             case 5:
                 return false;
         }
@@ -842,17 +842,17 @@ test('BeforeShowMonth', function () {
     input.focus();
     target = picker.find('.datepicker-months tbody span:nth(0)');
     equal(target.attr('title'), 'Example tooltip', '1st has tooltip');
-    ok(!target.hasClass('disabled'), 'January is enabled');
+    ok(!target.hasClass('disabled'), 'Ocak is enabled');
     target = picker.find('.datepicker-months tbody span:nth(2)');
-    ok(target.hasClass('testMarch'), 'March has testMarch class');
-    ok(!target.hasClass('disabled'), 'March enabled');
+    ok(target.hasClass('testMart'), 'Mart has testMart class');
+    ok(!target.hasClass('disabled'), 'Mart enabled');
     target = picker.find('.datepicker-months tbody span:nth(4)');
-    ok(target.hasClass('testMay'), 'May has testMay class');
-    ok(target.hasClass('disabled'), 'May is disabled');
+    ok(target.hasClass('testMayis'), 'Mayis has testMayis class');
+    ok(target.hasClass('disabled'), 'Mayis is disabled');
     target = picker.find('.datepicker-months tbody span:nth(5)');
-    ok(target.hasClass('disabled'), 'June is disabled');
+    ok(target.hasClass('disabled'), 'Haziran is disabled');
     target = picker.find('.datepicker-months tbody span:nth(6)');
-    ok(!target.hasClass('disabled'), 'July is enabled');
+    ok(!target.hasClass('disabled'), 'Temmuz is enabled');
 });
 
 
@@ -1313,7 +1313,7 @@ test('Default View Date (Object)', function(){
 
     input.focus();
 
-    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'May 1977');
+    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'Mayis 1977');
 });
 
 test('Default View Date (Date)', function(){
@@ -1329,7 +1329,7 @@ test('Default View Date (Date)', function(){
 
     input.focus();
 
-    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'May 1977');
+    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'Mayis 1977');
 });
 
 test('Default View Date (String)', function(){
@@ -1345,7 +1345,7 @@ test('Default View Date (String)', function(){
 
     input.focus();
 
-    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'May 1977');
+    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'Mayis 1977');
 });
 
 test('Immediate Updates', function(){
@@ -1535,7 +1535,7 @@ test('i18n: Leverage English (default) i18n titleFormat when translation key for
         picker = dp.picker;
 
     input.focus();
-    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'April 2015', 'Title is in default format: April 2015');
+    equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'Nisan 2015', 'Title is in default format: Nisan 2015');
 }));
 
 test('Z-index Offset: none', function(){
@@ -1756,20 +1756,20 @@ test('updateViewDate', function() {
         shouldTriggerChangeYear = false,
         monthShown = picker.find('.datepicker-days thead th.datepicker-switch');
 
-    equal(monthShown.text(), "May 1945", 'uses defaultViewDate on initialization');
+    equal(monthShown.text(), "Mayis 1945", 'uses defaultViewDate on initialization');
     input.datepicker('setDate', new Date(1945, 8, 2));
-    equal(monthShown.text(), "May 1945", 'does not change viewDate on `setDate` method');
+    equal(monthShown.text(), "Mayis 1945", 'does not change viewDate on `setDate` method');
     input.focus();
     picker.find('.datepicker-days tbody tr td.day.new:first').click();
-    equal(monthShown.text(), "May 1945", 'does not change viewDate if a day in next month is selected');
+    equal(monthShown.text(), "Mayis 1945", 'does not change viewDate if a day in next month is selected');
     shouldTriggerChangeMonth = true;
     picker.find('.datepicker-days thead th.next').click();
-    equal(monthShown.text(), 'June 1945', 'changing month must still be possible'); // and must trigger `changeMonth` event
+    equal(monthShown.text(), 'Haziran 1945', 'changing month must still be possible'); // and must trigger `changeMonth` event
     shouldTriggerChangeYear = true;
     picker.find('.datepicker-days thead th.datepicker-switch').click();
     picker.find('.datepicker-months thead th.next').click();
     picker.find('.datepicker-months tbody .month:first').click();
-    equal(monthShown.text(), 'January 1946', 'changing year must still be possible'); // and must trigger `changeYear` and `changeMonth` events
+    equal(monthShown.text(), 'Ocak 1946', 'changing year must still be possible'); // and must trigger `changeYear` and `changeMonth` events
 });
 test('Week Days: Week days default visibility (or enabled)', function(){
     var input = $('<input />')

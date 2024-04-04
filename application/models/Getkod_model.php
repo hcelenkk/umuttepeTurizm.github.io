@@ -110,6 +110,3 @@ class Getkod_model extends CI_Model {
         return "BNK".$kd;
     }
 }
-
-/* End of file getkod_model.php */
-/* Location: ./application/models/getkod_model.php */

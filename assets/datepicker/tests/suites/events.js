@@ -380,7 +380,7 @@ test('Selecting date from previous month triggers changeMonth', function() {
     equal(triggered, 1);
 });
 
-test('Selecting date from previous month in january triggers changeMonth/changeYear', function() {
+test('Selecting date from previous month in Ocak triggers changeMonth/changeYear', function() {
     var target,
         triggeredM = 0,
         triggeredY = 0;
@@ -421,7 +421,7 @@ test('Selecting date from next month triggers changeMonth', function() {
     equal(triggered, 1);
 });
 
-test('Selecting date from next month in december triggers changeMonth/changeYear', function() {
+test('Selecting date from next month in Aralik triggers changeMonth/changeYear', function() {
     var target,
         triggeredM = 0,
         triggeredY = 0;

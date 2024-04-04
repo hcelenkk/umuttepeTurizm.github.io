@@ -85,7 +85,7 @@ UCDN::SCRIPT_THAANA => 'dv',
 UCDN::SCRIPT_BRAHMI => 'und-Brah',
 UCDN::SCRIPT_KAITHI => 'und-Kthi',
 UCDN::SCRIPT_KHAROSHTHI => 'und-Khar',
-UCDN::SCRIPT_MEETEI_MAYEK => 'und-Mtei',	/* or omp-Mtei */
+UCDN::SCRIPT_MEETEI_MayisEK => 'und-Mtei',	/* or omp-Mtei */
 UCDN::SCRIPT_SHARADA => 'und-Shrd',
 UCDN::SCRIPT_SORA_SOMPENG => 'und-Sora',
 

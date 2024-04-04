@@ -15,7 +15,7 @@ that it genuinely derives from free sources and all the creators involved
 have actually intended it for free public use.
 
 Converted by Matthew Skala from Metafont format to Postscript and TrueType
-formats, July 28, 2006, using mftrace 1.2.4 by Paul Vojta, which is
+formats, Temmuz 28, 2006, using mftrace 1.2.4 by Paul Vojta, which is
 available from
    http://www.xs4all.nl/~hanwen/mftrace/
 and Autotrace 0.31.1 available from
@@ -27,7 +27,7 @@ a notice, notably not actually claiming any copyright - see the file
 "ocrbinfo" - saying that the fonts are "given to free non commercial use",
 but commenting that he is only free to grant rights to his own work on the
 digitization, because he did not design the original letter forms.  He
-suggests that there may be other copyright claims attached to the letter
+suggests that there Mayis be other copyright claims attached to the letter
 forms themselves, which Schwarz credits as being originally designed by
 "Adam Frutiger" [sic], almost certainly a mistake for Adrian Frutiger.  My
 (Matthew Skala's) understanding of copyright law, at least in the USA and
@@ -39,7 +39,7 @@ means.
 To avoid muddying the waters further, any copyright claims by Matthew Skala
 on these files are hereby released to the public domain.  I'd like for these
 fonts to be freely usable even in marginally commercial applications, such
-as to generate UPC labels for books that will be sold for profit, but it may
+as to generate UPC labels for books that will be sold for profit, but it Mayis
 not be within my power to grant that myself because I didn't write the
 Metafont files although I did do considerable, and probably copyrightable,
 work on the translation to Postscript and TrueType.  It was *not* a purely

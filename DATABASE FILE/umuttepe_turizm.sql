@@ -116,14 +116,14 @@ CREATE TABLE `tbl_bilet` (
   `biletEtiket` varchar(100) DEFAULT NULL,
   `biletDurum` varchar(50) NOT NULL,
   `biletOlusturmaTarihi` date DEFAULT NULL,
-  `biletOlusturmaYoneticisi` varchar(50) DEFAULT NULL
+  `biletOlusturMayisoneticisi` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Tablo döküm verisi `tbl_bilet`
 --
 
-INSERT INTO `tbl_bilet` (`biletKodu`, `rezervasyonKodu`, `biletAdi`, `biletKoltuk`, `biletYas`, `satinAlinanBilet`, `biletFiyati`, `biletEtiket`, `biletDurum`, `biletOlusturmaTarihi`, `biletOlusturmaYoneticisi`) VALUES
+INSERT INTO `tbl_bilet` (`biletKodu`, `rezervasyonKodu`, `biletAdi`, `biletKoltuk`, `biletYas`, `satinAlinanBilet`, `biletFiyati`, `biletEtiket`, `biletDurum`, `biletOlusturmaTarihi`, `biletOlusturMayisoneticisi`) VALUES
 ('TORD00001J00012022122915', 'ORD00001', 'Elif Aydin', '15', '31 Yas', 'UT013', '68', 'assets/backend/upload/etiket/ORD00001.pdf', '2', '2022-12-28', 'admin'),
 ('TORD00002J00012022123018', 'ORD00002', 'Anil Günes', '18', '30 Yas', 'UT013', '68', 'assets/backend/upload/etiket/ORD00002.pdf', '2', '2022-12-29', 'owner'),
 ('TORD00004J00052022123110', 'ORD00004', 'Derya Isik', '10', '32 Yas', 'UT010', '40', 'assets/backend/upload/etiket/ORD00004.pdf', '2', '2022-12-30', 'admin'),

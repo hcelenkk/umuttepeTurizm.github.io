@@ -38,11 +38,8 @@ class Rute extends CI_Controller {
 			 );
 		// die(print_r($data));
 		$this->db->insert('tbl_sehir', $data);
-		$this->session->set_flashdata('message', 'swal("Data Added Successfully");');
+		$this->session->set_flashdata('message', 'swal("Veriler Başarıyla Eklendi!");');
 		redirect('backend/rute');
 	}
 }
 
-/* End of file Rute.php */
-
-/* Location: ./application/controllers/backend/Rute.php */

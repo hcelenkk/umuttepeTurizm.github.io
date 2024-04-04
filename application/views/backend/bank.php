@@ -17,13 +17,13 @@
 	<?php $this->load->view('backend/include/base_nav'); ?>
 	
 	<div class="container-fluid">
-		<h1 class="h5 text-gray-800">Bank List</h1>
+		<h1 class="h5 text-gray-800">Banka Listesi</h1>
 		<!-- DataTales Example -->
 		
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
 				<button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#ModalTujuan">
-				Add Bank
+				Banka Ekle
 				</button>
 			</div>
 			<div class="card-body">
@@ -32,11 +32,11 @@
 					<thead class="thead-dark">
 							<tr>
 								<th>#</th>
-								<th>Bank Code</th>
-								<th>Name</th>
-								<th>Account Number</th>
-								<th>On behalf of</th>
-								<th>Action</th>
+								<th>Banka Kodu</th>
+								<th>Ad</th>
+								<th>Hesap Numarası</th>
+								<th>Adına</th>
+								<th>Aksiyon</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -48,7 +48,7 @@
 								<td><?= $row['bankaHesapNo']; ?></td>
 								<td><?= $row['bankaMusteri']; ?></td>
 								<td align="center"><a href="<?= base_url('backend/bank/viewbank/'.$row['bankaKodu']) ?>"
-										class="btn btn btn-info">View</a></a>
+										class="btn btn btn-info">İncele</a></a>
 								</td>
 							</tr>
 							<?php } ?>
@@ -57,12 +57,12 @@
 				</div>
 			</div>
 		</div>
-		<!-- /.container-fluid -->
+		
 	</div>
-	<!-- /.container-fluid -->
+	
 	</div>
-	<!-- End of Main Content -->
-	<!-- Footer -->
+	
+	
 	<?php $this->load->view('backend/include/base_footer'); ?>
 	<!-- Modal -->
 	<div class="modal fade" id="ModalTujuan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -102,7 +102,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- js -->
+	
 	<?php $this->load->view('backend/include/base_js'); ?>
 </body>
 

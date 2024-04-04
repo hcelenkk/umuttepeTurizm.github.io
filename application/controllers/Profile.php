@@ -40,17 +40,17 @@ class Profile extends CI_Controller {
 		$pelanggan = $this->db->query("SELECT musteriSifre FROM tbl_musteri where musteriKodu ='".$id."'")->row_array();
 		// die(print_r($pelanggan));
 		$this->form_validation->set_rules('currentpassword', 'currentpassword', 'trim|required|min_length[8]',array(
-			'required' => 'Enter Password',
+			'required' => 'Şifre Giriniz',
 			 ));
 		$this->form_validation->set_rules('new_password1', 'new_password1', 'trim|required|min_length[8]|matches[new_password2]',array(
-			'required' => 'Enter Password.',
-			'matches' => 'Password Not Same.',
-			'min_length' => 'Password Minimal 8 Characters.'
+			'required' => 'Şifre Giriniz.',
+			'matches' => 'Şifreler Farklı',
+			'min_length' => 'Minimum 8 karakter olmalı.'
 			 ));
 		$this->form_validation->set_rules('new_password2', 'new_password2', 'trim|required|min_length[8]|matches[new_password1]',array(
-			'required' => 'Enter Password.',
-			'matches' => 'Password Not Same.',
-			'min_length' => 'Password Minimal 8 Characters.'
+			'required' => 'Şifre Giriniz.',
+			'matches' => 'Şifreler Farklı',
+			'min_length' => 'Minimum 8 karakter olmalı.'
 			 ));
 		if ($this->form_validation->run() == false) {
 			$this->load->view('frontend/changepassword');
@@ -59,12 +59,12 @@ class Profile extends CI_Controller {
 			$newpassword 	 = $this->input->post('new_password1');
 			if (!password_verify($currentpassword, $pelanggan['musteriSifre'])) {
 				$this->session->set_flashdata('gagal', '<div class="alert alert-danger" role="alert">
-				Previous Password Wrong
+				Önceki Şifre Hatalı
 					</div>');
 				redirect('profile/changepassword');
 			}elseif ($currentpassword == $newpassword) {
 				$this->session->set_flashdata('gagal', '<div class="alert alert-danger" role="alert">
-				Passwords cant be the same before
+				Şifreniz Eski Şifrenizle Aynı Olamaz
 					</div>');
 				redirect('profile/changepassword');
 			}else{
@@ -89,5 +89,3 @@ class Profile extends CI_Controller {
 	}
 }
 
-/* End of file Profile.php */
-/* Location: ./application/controllers/Profile.php */
